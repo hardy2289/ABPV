@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/profile"
+            android:title="Update Profile" />
+        <item
+            android:id="@+id/nav_rappointment"
+            android:icon="@drawable/appointmentnewf"
+            android:title="Request Appointment" />
+        <item
+            android:id="@+id/nav_bappointment"
+            android:icon="@drawable/appointmentnewf"
+            android:title="Book Appointment" />
+        <item
+            android:id="@+id/nav_cappointment"
+            android:icon="@drawable/appointcancel"
+            android:title="Cancel Appointment" />
+        <item
+            android:id="@+id/nav_oprescription"
+            android:icon="@drawable/prescriptiontry"
+            android:title="Order Prescription" />
+        <item
+            android:id="@+id/nav_nearestgp"
+            android:icon="@drawable/prescriptiontry"
+            android:title="Find Nearest GP" />
+    </group>
+
+
+
+</menu>

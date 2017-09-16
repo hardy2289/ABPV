@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.ganesha.abpv">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.ACCESS_GPS" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_ASSISTED_GPS" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.location.PROVIDERS_CHANGED" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="com.android.alarm.permission.SET_ALARM" />
+    <!-- permission required to Send SMS -->
+    <uses-permission android:name="android.permission.SEND_SMS" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <!-- Main Launching Activity -->
+        <activity
+            android:name=".MainActivities.MainActivities.MainActivity"
+            android:label="ABPV"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivities.MainActivities.Patient.PatientRegister"
+            android:label="ABPV"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MainActivities.MainActivities.Patient.PatientLogin"
+            android:label="ABPV"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MainActivities.MainActivities.Patient.AddDetailsPHome"
+            android:label="ABPV"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MainActivities.MainActivities.Doctor.DoctorHome"
+            android:label="ABPV"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MainActivities.MainActivities.Doctor.DoctorLogin"
+            android:label="ABPV"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MainActivities.MainActivities.Patient.GoogleLogin"
+            android:label="ABPV"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MainActivities.MainActivities.Patient.ResetPassword"
+            android:label="ABPV"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MainActivities.MainActivities.Appointment.BookingAppointment"
+            android:label="ABPV"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MainActivities.MainActivities.Doctor.DoctorRegistration"
+            android:label="ABPV"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MainActivities.MainActivities.Doctor.DoctorResetPassword"
+            android:label="ABPV"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MainActivities.MainActivities.Appointment.CancellingAppointment"
+            android:label="ABPV"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MainActivities.MainActivities.Appointment.BookedHistory"
+            android:label="ABPV"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MainActivities.MainActivities.Appointment.CancelledHistory"
+            android:label="ABPV"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MainActivities.MainActivities.Doctor.AppointmentConfirmation"
+            android:label="ABPV"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MainActivities.MainActivities.Doctor.PrescriptionConfirmation"
+            android:label="ABPV"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MainActivities.MainActivities.Doctor.DoctorMain"
+            android:label="ABPV"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MainActivities.MainActivities.Doctor.NavigationDoctor"
+            android:label="ABPV"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MainActivities.MainActivities.Prescription.Prescription"
+            android:label="ABPV"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MainActivities.MainActivities.Appointment.RequestAppointment"
+            android:label="ABPV"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MainActivities.MainActivities.Patient.PatientNotification"
+            android:label="ABPV"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MainActivities.MainActivities.Patient.PatientCancel"
+            android:label="ABPV"
+            android:screenOrientation="portrait" />
+        <activity android:name=".MainActivities.MainActivities.trial" />
+        <activity
+            android:name=".MainActivities.MainActivities.Patient.Navigation"
+            android:label="ABPV"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".MainActivities.MainActivities.Doctor.DoctorGoogleLogin"></activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "338029480427",
+    "firebase_url": "https://abpn-1ec99.firebaseio.com",
+    "project_id": "abpn-1ec99",
+    "storage_bucket": "abpn-1ec99.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:338029480427:android:d8ef539efc7989e3",
+        "android_client_info": {
+          "package_name": "com.example.ganesha.abpv"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "338029480427-p4en8v8ed7ek1vhkti8jgkol8ppqsdrh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.ganesha.abpv",
+            "certificate_hash": "de9ec9269c840da2f255c187558a030945d17c59"
+          }
+        },
+        {
+          "client_id": "338029480427-rvcl3rouqulpiacqd5lvc8eugt0jti3l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAwBwgYEqYxcYS1H-AB0AKRQgGcZqqctLM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "338029480427-rvcl3rouqulpiacqd5lvc8eugt0jti3l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_patientappointment"
+            android:icon="@drawable/profile"
+            android:title="Appointments List" />
+        <item
+            android:id="@+id/nav_confirmappointment"
+            android:icon="@drawable/appointmentnewf"
+            android:title="Confirm Appointments" />
+        <item
+            android:id="@+id/nav_confirmprescription"
+            android:icon="@drawable/appointmentnewf"
+            android:title="Prescription to Patient" />
+        <item
+            android:id="@+id/nav_ppharmacy"
+            android:icon="@drawable/appointcancel"
+            android:title="Prescription to Pharmacy" />
+        <item
+            android:id="@+id/nav_cpatient"
+            android:icon="@drawable/prescriptiontry"
+            android:title="Contact Patient" />
+
+    </group>
+
+
+
+</menu>

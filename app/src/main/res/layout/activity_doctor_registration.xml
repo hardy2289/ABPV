@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.example.ganesha.abpv.MainActivities.MainActivities.Doctor.DoctorRegistration">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#99257bd7"
+            android:paddingBottom="16dp"
+            android:paddingLeft="64dp"
+            android:paddingRight="64dp"
+            android:paddingTop="16dp"
+            app:layout_constraintRight_toRightOf="parent"
+            tools:layout_editor_absoluteY="8dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+
+
+            <android.support.design.widget.TextInputLayout
+
+
+                android:id="@+id/textInputLayout3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="26dp">
+
+                <EditText
+                    android:id="@+id/editDoctorEmailRegistration"
+                    android:layout_width="305dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="65dp"
+                    android:hint="Email Address"
+                    android:inputType="textEmailAddress"
+                    android:textColor="@android:color/black"
+                    android:textColorHint="@android:color/background_light" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+
+
+                android:id="@+id/textInputLayout1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/textInputLayout3">
+
+                <EditText
+                    android:id="@+id/editDoctorPasswordRegistration"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentStart="true"
+                    android:hint="Password"
+                    android:inputType="textPassword"
+                    android:textColor="@android:color/black"
+                    android:textColorHint="@android:color/background_light" />
+            </android.support.design.widget.TextInputLayout>
+
+            <Button
+                android:id="@+id/btnDoctorRegistration"
+                android:layout_width="145dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textInputLayout1"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="80dp"
+                android:background="@color/colorPrimary"
+                android:text="Register"
+                android:textColor="@color/bright_foreground_inverse_material_light" />
+
+            <Button
+                android:id="@+id/btnDoctorLoginReg"
+                android:layout_width="145dp"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/btnDoctorRegistration"
+                android:layout_alignStart="@+id/btnDoctorRegistration"
+                android:layout_below="@+id/btnDoctorRegistration"
+                android:layout_marginTop="62dp"
+                android:background="@color/colorPrimary"
+                android:text="Login"
+                android:textColor="@color/bright_foreground_inverse_material_light" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+</LinearLayout>
