@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.ganesha.abpv.MainActivities.MainActivities.ConnectionDetector;
 import com.example.ganesha.abpv.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -22,6 +23,7 @@ public class ResetPassword extends PatientLogin {
     private Button btnRestPasswordRP;
     private Button btnLoginRP;
     private EditText txtEmailRP;
+    ConnectionDetector cd;
 
     public ResetPassword() {
 
@@ -31,11 +33,22 @@ public class ResetPassword extends PatientLogin {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_reset_password);
+        cd = new ConnectionDetector(getApplicationContext());
         btnRestPasswordRP=(Button) findViewById(R.id.btn_patient_password_reset_FP);
         btnLoginRP=(Button) findViewById(R.id.btn_patient_login_FP);
         txtEmailRP=(EditText) findViewById(R.id.edit_txt_email_FP);
         btnRestPasswordRP.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
+
+                ConnectionDetector cd;
+
+                cd = new ConnectionDetector(getApplicationContext());
+                // get Internet status
+                isInternetPresent = cd.isConnectingToInternet();
+                // check for Internet status
+                if (isInternetPresent) {
+
+
                 String email = txtEmailRP.getText().toString().trim();
                 String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
                 FirebaseAuth auth = FirebaseAuth.getInstance();
@@ -64,7 +77,11 @@ public class ResetPassword extends PatientLogin {
                                 });
 
                     }
+                }else
+                {
+                    Toast.makeText(ResetPassword.this, "No Internet Connection,Please check your internet connection.", Toast.LENGTH_SHORT).show();
 
+                }
 
             }
         });

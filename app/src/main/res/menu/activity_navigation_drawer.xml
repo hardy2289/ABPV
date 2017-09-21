@@ -8,23 +8,23 @@
             android:title="Update Profile" />
         <item
             android:id="@+id/nav_rappointment"
-            android:icon="@drawable/appointmentnewf"
+            android:icon="@drawable/appointment"
             android:title="Request Appointment" />
         <item
             android:id="@+id/nav_bappointment"
-            android:icon="@drawable/appointmentnewf"
+            android:icon="@drawable/appointment"
             android:title="Book Appointment" />
         <item
             android:id="@+id/nav_cappointment"
-            android:icon="@drawable/appointcancel"
+            android:icon="@drawable/appointment"
             android:title="Cancel Appointment" />
         <item
             android:id="@+id/nav_oprescription"
-            android:icon="@drawable/prescriptiontry"
+            android:icon="@drawable/prescription"
             android:title="Order Prescription" />
         <item
             android:id="@+id/nav_nearestgp"
-            android:icon="@drawable/prescriptiontry"
+            android:icon="@drawable/near_gp_view"
             android:title="Find Nearest GP" />
     </group>
 

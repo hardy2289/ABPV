@@ -12,9 +12,11 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.ganesha.abpv.MainActivities.MainActivities.ConnectionDetector;
 import com.example.ganesha.abpv.MainActivities.MainActivities.Model.Appointments;
-import com.example.ganesha.abpv.MainActivities.MainActivities.Support;
+import com.example.ganesha.abpv.MainActivities.MainActivities.Model.NewAppointments;
 import com.example.ganesha.abpv.MainActivities.MainActivities.Model.Users;
+import com.example.ganesha.abpv.MainActivities.MainActivities.Support;
 import com.example.ganesha.abpv.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -38,12 +40,15 @@ public class PatientRegister extends AppCompatActivity {
     protected Button btnLogin;
     protected Button btnResetPassword;
     private ProgressDialog progressDialog;
+    ConnectionDetector cd;
+    Boolean isInternetPresent = true;
 
     @Override
     protected void onCreate (Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.patient_register_ep);
+        cd = new ConnectionDetector(getApplicationContext());
 
         txtEmail = (EditText) findViewById(R.id.edit_txt_email_patient_loginep);
         txtPassword = (EditText) findViewById(R.id.edit_txt_password_patient_loginep);
@@ -58,19 +63,28 @@ public class PatientRegister extends AppCompatActivity {
         btnRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+               ConnectionDetector cd;
+
+                cd = new ConnectionDetector(getApplicationContext());
+                // get Internet status
+                isInternetPresent = cd.isConnectingToInternet();
+                // check for Internet status
+
+                if (isInternetPresent) {
+
                 String email = txtEmail.getText().toString().trim();
                 String password = txtPassword.getText().toString().trim();
                 String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
                 //progressDialog = new ProgressDialog(this);
-                 if (TextUtils.isEmpty(email)) {
-                     Toast.makeText(PatientRegister.this, "Enter email address!", Toast.LENGTH_SHORT).show();}
-                 else if (!email.matches(emailPattern)){
-                     Toast.makeText(PatientRegister.this, "Invalid email address", Toast.LENGTH_SHORT).show();}
-                 else if (TextUtils.isEmpty(password)) {
-                     Toast.makeText(PatientRegister.this, "Enter password!", Toast.LENGTH_SHORT).show();}
-                 else if (password.length() < 6) {
-                     Toast.makeText(PatientRegister.this, "Password too short, enter minimum 6 characters!", Toast.LENGTH_SHORT).show();}
-                 else{
+                if (TextUtils.isEmpty(email)) {
+                    Toast.makeText(PatientRegister.this, "Enter email address!", Toast.LENGTH_SHORT).show();
+                } else if (!email.matches(emailPattern)) {
+                    Toast.makeText(PatientRegister.this, "Invalid email address", Toast.LENGTH_SHORT).show();
+                } else if (TextUtils.isEmpty(password)) {
+                    Toast.makeText(PatientRegister.this, "Enter password!", Toast.LENGTH_SHORT).show();
+                } else if (password.length() < 6) {
+                    Toast.makeText(PatientRegister.this, "Password too short, enter minimum 6 characters!", Toast.LENGTH_SHORT).show();
+                } else {
                     mAuth.createUserWithEmailAndPassword(email, password)
                             .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                                 @Override
@@ -89,6 +103,12 @@ public class PatientRegister extends AppCompatActivity {
 
                             });
                 }
+
+           }else
+            {
+                Toast.makeText(PatientRegister.this, "No Internet Connection,Please check your internet connection.", Toast.LENGTH_SHORT).show();
+
+            }
 
             }
         });
@@ -137,6 +157,7 @@ public class PatientRegister extends AppCompatActivity {
 
         writeNewAppointment(userAppointmentDate,AppointmentId,userAppointmentTime, userDateofBirth, userDoctorName, userLastname,userPhoneno, DoctorId,PatientID, uid, user.getUid());
 
+        writeNewAppointments(userAppointmentDate,userAppointmentTime,DoctorId,userDoctorName, uid);
         Toast.makeText(PatientRegister.this, "Welcome to the Appointments Booking and Prescription Viewer", Toast.LENGTH_LONG).show();
         Intent takeUserHome = new Intent(PatientRegister.this, Navigation.class);
         startActivity(takeUserHome);
@@ -163,12 +184,19 @@ public class PatientRegister extends AppCompatActivity {
     public void writeNewAppointment(String AppointmentDate,String AppointmentID, String AppointmentTime, String DOB, String DoctorName,
                                     String LastName, String PhoneNo, String zDocotrID, String zPatientID, String Uid, String userId ) {
 
-        Appointments appointments = new Appointments(AppointmentDate,AppointmentID, AppointmentTime,DOB, DoctorName, LastName, PhoneNo,
-                                 zDocotrID, zPatientID, Uid);
+        Appointments appointments = new Appointments(AppointmentDate, AppointmentID, AppointmentTime, DOB, DoctorName, LastName, PhoneNo,
+                zDocotrID, zPatientID, Uid);
 
         mDatabase.child("appointment").child(userId).child("app1").setValue(appointments);
+    }
 
-    }@Override
+        public void writeNewAppointments(String AppointmentDateA, String AppointmentTimeA, String DoctorIDA, String DoctorNameA, String userId){
+
+            NewAppointments newAppointments=new NewAppointments(AppointmentDateA, AppointmentTimeA,DoctorIDA,DoctorNameA);
+
+        mDatabase.child("newappointment").child(userId).child("app1").setValue(newAppointments);
+    };
+    @Override
     public void onStop() {
         super.onStop();
         this.finish();

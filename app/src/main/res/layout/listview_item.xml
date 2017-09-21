@@ -12,7 +12,7 @@
         android:layout_marginBottom="5dp"
         android:layout_marginLeft="5dp"
         android:layout_marginTop="10dp"
-        android:text="Doctor ID                :"
+        android:text="Doctor ID                 :"
         android:textColor="@android:color/background_dark" />
 
     <TextView
@@ -33,7 +33,7 @@
         android:layout_marginBottom="5dp"
         android:layout_marginLeft="5dp"
         android:layout_marginTop="5dp"
-        android:text="Doctor Name         :"
+        android:text="Doctor Name          :"
         android:textColor="@android:color/background_dark" />
 
     <TextView
@@ -55,40 +55,39 @@
         android:layout_marginBottom="5dp"
         android:layout_marginLeft="5dp"
         android:layout_marginTop="5dp"
-        android:text="Appointment          :"
+        android:text="Appointment Date :"
         android:textColor="@android:color/background_dark" />
 
     <TextView
-        android:id="@+id/Appointment"
+        android:id="@+id/Appointment_Date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/Doctor_name"
         android:layout_marginBottom="5dp"
         android:layout_marginTop="5dp"
         android:layout_toRightOf="@+id/populationlabel"
-        android:text="28 September 2017 Thu 4:10"
+        android:text="28 September 2017"
         android:textColor="@android:color/background_dark" />
 
     <TextView
         android:id="@+id/populationlabel1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/Appointment"
-        android:layout_marginBottom="5dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginTop="5dp"
-        android:text="Appointment No    :"
-        android:textColor="@android:color/background_dark" />
+        android:text="Appointment Time :"
+        android:textColor="@android:color/background_dark"
+        android:layout_below="@+id/populationlabel"
+        android:layout_alignLeft="@+id/populationlabel"
+        android:layout_alignStart="@+id/populationlabel" />
 
     <TextView
-        android:id="@+id/Appointment_no"
+        android:id="@+id/Appointment_Time"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/populationlabel1"
 
         android:layout_toEndOf="@+id/populationlabel1"
         android:layout_toRightOf="@+id/populationlabel1"
-        android:text="211"
+        android:text="04:10"
         android:textColor="@android:color/background_dark" />
 
     <ImageView

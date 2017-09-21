@@ -6,7 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
-import com.example.ganesha.abpv.MainActivities.MainActivities.Doctor.DoctorRegistration;
+import com.example.ganesha.abpv.MainActivities.MainActivities.Doctor.DoctorLogin;
 import com.example.ganesha.abpv.MainActivities.MainActivities.Patient.PatientLogin;
 import com.example.ganesha.abpv.R;
 
@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
         btnDoctorPage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent DoctorPage = new Intent(MainActivity.this, DoctorRegistration.class);
+                Intent DoctorPage = new Intent(MainActivity.this, DoctorLogin.class);
                 startActivity(DoctorPage);
 
             }

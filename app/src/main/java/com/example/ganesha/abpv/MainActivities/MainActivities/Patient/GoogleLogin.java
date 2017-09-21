@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.example.ganesha.abpv.MainActivities.MainActivities.BaseActivity;
+import com.example.ganesha.abpv.MainActivities.MainActivities.ConnectionDetector;
 import com.example.ganesha.abpv.MainActivities.MainActivities.Model.Users;
 import com.example.ganesha.abpv.R;
 import com.google.android.gms.auth.api.Auth;
@@ -43,13 +44,15 @@ public class GoogleLogin extends BaseActivity implements GoogleApiClient.OnConne
     // [START declare_auth_listener]
     private FirebaseAuth.AuthStateListener mAuthListener;
     private GoogleApiClient mGoogleApiClient;
+    ConnectionDetector cd;
+    Boolean isInternetPresent = true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_google_login);
 
-
+        cd = new ConnectionDetector(getApplicationContext());
         mDatabase = FirebaseDatabase.getInstance().getReference();
 
         // [START config_signin]
@@ -86,8 +89,9 @@ public class GoogleLogin extends BaseActivity implements GoogleApiClient.OnConne
             }
         };
         // [END auth_state_listener]
-
         signIn();
+
+
     }
 
     // [START on_start_add_listener]

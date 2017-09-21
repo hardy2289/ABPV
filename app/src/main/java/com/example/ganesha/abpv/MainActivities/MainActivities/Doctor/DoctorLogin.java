@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.ganesha.abpv.MainActivities.MainActivities.ConnectionDetector;
 import com.example.ganesha.abpv.MainActivities.MainActivities.Patient.GoogleLogin;
 import com.example.ganesha.abpv.R;
 import com.google.android.gms.auth.api.Auth;
@@ -36,12 +37,15 @@ public class DoctorLogin extends AppCompatActivity implements GoogleApiClient.On
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener mAuthListener;
     private GoogleApiClient mGoogleApiClient;
+    ConnectionDetector cd;
+    Boolean isInternetPresent = true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_doctor_login);
 
+        cd = new ConnectionDetector(getApplicationContext());
         txtEmailDL=(EditText) findViewById(R.id.editDoctorEmailLogin);
         txtPasswordDL=(EditText) findViewById(R.id.edit_doctor_password);
         btnDoctorLoginDL=(Button) findViewById(R.id.btn_doctor_login);
@@ -76,6 +80,19 @@ public class DoctorLogin extends AppCompatActivity implements GoogleApiClient.On
         btnDoctorLoginDL.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
+
+
+                ConnectionDetector cd;
+
+                cd = new ConnectionDetector(getApplicationContext());
+                // get Internet status
+                isInternetPresent = cd.isConnectingToInternet();
+                // check for Internet status
+
+                if (isInternetPresent) {
+
+
+
                 String email = txtEmailDL.getText().toString().trim();
                 String password = txtPasswordDL.getText().toString().trim();
                 String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
@@ -124,6 +141,13 @@ public class DoctorLogin extends AppCompatActivity implements GoogleApiClient.On
                     {
                         Toast.makeText(DoctorLogin.this, "Access Denied!", Toast.LENGTH_SHORT).show();
                     }
+                }
+
+            }
+                else
+                {
+                    Toast.makeText(DoctorLogin.this, "No Internet Connection,Please check your internet connection.", Toast.LENGTH_SHORT).show();
+
                 }
 
             }

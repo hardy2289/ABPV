@@ -15,13 +15,13 @@ import android.view.MenuItem;
 import android.widget.Toast;
 
 import com.example.ganesha.abpv.MainActivities.MainActivities.BaseActivity;
+import com.example.ganesha.abpv.MainActivities.MainActivities.Model.Users;
 import com.example.ganesha.abpv.MainActivities.MainActivities.PatientFragment.AddDetailsF;
 import com.example.ganesha.abpv.MainActivities.MainActivities.PatientFragment.BookingAppointmentF;
 import com.example.ganesha.abpv.MainActivities.MainActivities.PatientFragment.CancellingAppointmentF;
 import com.example.ganesha.abpv.MainActivities.MainActivities.PatientFragment.FindNearestGP;
 import com.example.ganesha.abpv.MainActivities.MainActivities.PatientFragment.PrescriptionF;
 import com.example.ganesha.abpv.MainActivities.MainActivities.PatientFragment.RequestAppointmentF;
-import com.example.ganesha.abpv.MainActivities.MainActivities.Model.Users;
 import com.example.ganesha.abpv.R;
 import com.google.firebase.analytics.FirebaseAnalytics;
 import com.google.firebase.auth.FirebaseAuth;
@@ -36,7 +36,6 @@ public class Navigation extends AppCompatActivity
 
     private DatabaseReference mDatabase;
     private FirebaseAnalytics mFirebaseAnalytics;
-
     public FirebaseAuth mAuth = FirebaseAuth.getInstance();
     public FirebaseAuth.AuthStateListener mAuthListener;
     @Override

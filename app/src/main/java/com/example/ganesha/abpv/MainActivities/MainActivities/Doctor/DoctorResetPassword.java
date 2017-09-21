@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.ganesha.abpv.MainActivities.MainActivities.ConnectionDetector;
 import com.example.ganesha.abpv.MainActivities.MainActivities.Patient.PatientLogin;
 import com.example.ganesha.abpv.R;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -39,6 +40,16 @@ public class DoctorResetPassword extends DoctorLogin {
         btnRestPasswordDRP.setOnClickListener(new View.OnClickListener(){
 
             public void onClick(View v){
+
+                ConnectionDetector cd;
+
+                cd = new ConnectionDetector(getApplicationContext());
+                // get Internet status
+                isInternetPresent = cd.isConnectingToInternet();
+                // check for Internet status
+                if (isInternetPresent) {
+
+
                 String email = txtEmailDRP.getText().toString().trim();
                 String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
                 FirebaseAuth auth = FirebaseAuth.getInstance();
@@ -76,6 +87,13 @@ public class DoctorResetPassword extends DoctorLogin {
                                     }
                                 }
                             });
+
+                }
+
+                }
+                else
+                {
+                    Toast.makeText(DoctorResetPassword.this, "No Internet Connection,Please check your internet connection.", Toast.LENGTH_SHORT).show();
 
                 }
 

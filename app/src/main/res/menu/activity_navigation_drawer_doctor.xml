@@ -8,19 +8,19 @@
             android:title="Appointments List" />
         <item
             android:id="@+id/nav_confirmappointment"
-            android:icon="@drawable/appointmentnewf"
+            android:icon="@drawable/appointment"
             android:title="Confirm Appointments" />
         <item
             android:id="@+id/nav_confirmprescription"
-            android:icon="@drawable/appointmentnewf"
+            android:icon="@drawable/prescription"
             android:title="Prescription to Patient" />
         <item
             android:id="@+id/nav_ppharmacy"
-            android:icon="@drawable/appointcancel"
+            android:icon="@drawable/prescription"
             android:title="Prescription to Pharmacy" />
         <item
             android:id="@+id/nav_cpatient"
-            android:icon="@drawable/prescriptiontry"
+            android:icon="@drawable/chat"
             android:title="Contact Patient" />
 
     </group>

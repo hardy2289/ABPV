@@ -16,9 +16,9 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.ganesha.abpv.MainActivities.MainActivities.Patient.FragmentSupport;
 import com.example.ganesha.abpv.MainActivities.MainActivities.Model.PersonalDetails;
 import com.example.ganesha.abpv.MainActivities.MainActivities.Model.Users;
+import com.example.ganesha.abpv.MainActivities.MainActivities.Patient.FragmentSupport;
 import com.example.ganesha.abpv.R;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
@@ -71,6 +71,9 @@ public class AddDetailsF extends Fragment {
                 parent.removeView(view);
         }
         try{
+
+             Toast.makeText(getActivity(), "Please Update your Profile", Toast.LENGTH_SHORT).show();
+
         // Inflate the layout for this fragment
         view = inflater.inflate(R.layout.fragment_add_details, container, false);
         mDatabase = FirebaseDatabase.getInstance().getReference();
@@ -86,6 +89,7 @@ public class AddDetailsF extends Fragment {
         txtDOB = (EditText) view.findViewById(R.id.editDOB);
         txtPhoneNo = (EditText) view.findViewById(R.id.editPhoneNo);
         btnSubmit = (Button) view.findViewById(R.id.btnAddDetails);
+
 
         ArrayAdapter<String> adapter = new ArrayAdapter<>(getActivity(), android.R.layout.select_dialog_singlechoice, state);
         txtGender = (AutoCompleteTextView) view.findViewById(R.id.editGender);
@@ -192,7 +196,11 @@ public class AddDetailsF extends Fragment {
 
         return view;
     }
-       private void submitProfile() {
+
+    private void onDataChange() {
+    }
+
+    private void submitProfile() {
 
         final String sFirstName = txtFirstName.getText().toString();
         final String sLastName = txtLastName.getText().toString();
@@ -304,6 +312,8 @@ public class AddDetailsF extends Fragment {
             return email;
         }
     }
+
+
 
     public void writeToProfile(String authentication,String dateofbirth, String email,String firstname,
                                String gender, String lastname, String phoneno, String userId,String username ) {

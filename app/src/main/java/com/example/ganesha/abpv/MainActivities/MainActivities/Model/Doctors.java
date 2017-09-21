@@ -19,10 +19,6 @@ public class Doctors {
     public String zDoctorID;
 
 
-
-
-
-
     public Doctors() {
         // Default constructor required for calls to DataSnapshot.getValue(Users.class)
     }
