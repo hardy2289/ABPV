@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.ganesha.abpv.MainActivities.MainActivities.ConnectionDetector;
 import com.example.ganesha.abpv.R;
 import com.google.android.gms.auth.api.Auth;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
@@ -40,7 +41,8 @@ public class PatientLogin extends AppCompatActivity implements GoogleApiClient.O
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener mAuthListener;
     private GoogleApiClient mGoogleApiClient;
-
+    Boolean isInternetPresent = true;
+    ConnectionDetector cd;
 
     @Override
     protected void onCreate (Bundle savedInstanceState) {
@@ -48,7 +50,7 @@ public class PatientLogin extends AppCompatActivity implements GoogleApiClient.O
         super.onCreate (savedInstanceState);
         setContentView(R.layout.activity_patient_login);
 
-
+        cd = new ConnectionDetector(getApplicationContext());
         txtEmailPL=(EditText) findViewById(R.id.edit_txt_email_patient_login);
         txtPasswordPL=(EditText) findViewById(R.id.edit_txt_password_patient_login);
         btnRegisterPL = (Button) findViewById(R.id.btn_patient_register_login);
@@ -91,39 +93,60 @@ public class PatientLogin extends AppCompatActivity implements GoogleApiClient.O
         btnLoginPL.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                String email = txtEmailPL.getText().toString().trim();
-                String password = txtPasswordPL.getText().toString().trim();
-                String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
-                if (TextUtils.isEmpty(email)) {
-                    Toast.makeText(PatientLogin.this, "Enter email address!", Toast.LENGTH_SHORT).show();   }
-                else if (!email.matches(emailPattern)){
-                    Toast.makeText(PatientLogin.this, "Invalid email address", Toast.LENGTH_SHORT).show();  }
-                else if (TextUtils.isEmpty(password)) {
-                    Toast.makeText(PatientLogin.this, "Enter password!", Toast.LENGTH_SHORT).show();   }
-                else if (password.length() < 6) {
-                    Toast.makeText(PatientLogin.this, "Password too short!", Toast.LENGTH_SHORT).show();  }
-                                                                                                                                     else if ((email.matches("doctor1@gmail.com")||email.matches("doctor2@gmail.com"))|| ((email.matches("doctor3@gmail.com"))||(email.matches("doctor4@gmail.com")))||(email.matches("doctor5@gmail.com")||email.matches("doctor6@gmail.com"))|| ((email.matches("doctor7@gmail.com"))||(email.matches("doctor8@gmail.com")))) {
-                    Toast.makeText(PatientLogin.this, "Access Denied!", Toast.LENGTH_SHORT).show(); }
-                else
-                {     mAuth.signInWithEmailAndPassword(email, password)
-                            .addOnCompleteListener(PatientLogin.this, new OnCompleteListener<AuthResult>() {
-                                @Override
-                                public void onComplete(@NonNull Task<AuthResult> task) {
-                                    Log.d(TAG, "signInWithEmail:onComplete:" + task.isSuccessful());
-                                    if (task.isSuccessful()) {
-                                        Intent UserHomepage = new Intent(PatientLogin.this, Navigation.class);
-                                        startActivity(UserHomepage);
-                                    } else if (!task.isSuccessful()) {
-                                        Log.w(TAG, "signInWithEmail", task.getException());
-                                        Toast.makeText(PatientLogin.this, "Authentication failed.",
-                                                Toast.LENGTH_SHORT).show();
-                                        Intent UserHomepage = new Intent(PatientLogin.this, PatientLogin.class);
-                                        startActivity(UserHomepage);
-                                    }
+                ConnectionDetector cd;
 
-                                }
-                            });
+                cd = new ConnectionDetector(getApplicationContext());
+                // get Internet status
+                isInternetPresent = cd.isConnectingToInternet();
+                // check for Internet status
+
+                if (isInternetPresent) {
+
+                    // Internet connection is not present
+                    // Ask user to connect to Internet
+                    String email = txtEmailPL.getText().toString().trim();
+                    String password = txtPasswordPL.getText().toString().trim();
+                    String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
+
+                    // check for Internet status
+                    if (TextUtils.isEmpty(email)) {
+                        Toast.makeText(PatientLogin.this, "Enter email address!", Toast.LENGTH_SHORT).show();
+                    } else if (!email.matches(emailPattern)) {
+                        Toast.makeText(PatientLogin.this, "Invalid email address", Toast.LENGTH_SHORT).show();
+                    } else if (TextUtils.isEmpty(password)) {
+                        Toast.makeText(PatientLogin.this, "Enter password!", Toast.LENGTH_SHORT).show();
+                    } else if (password.length() < 6) {
+                        Toast.makeText(PatientLogin.this, "Password too short!", Toast.LENGTH_SHORT).show();
+                    } else if ((email.matches("doctor1@gmail.com") || email.matches("doctor2@gmail.com")) || ((email.matches("doctor3@gmail.com")) || (email.matches("doctor4@gmail.com"))) || (email.matches("doctor5@gmail.com") || email.matches("doctor6@gmail.com")) || ((email.matches("doctor7@gmail.com")) || (email.matches("doctor8@gmail.com")))) {
+                        Toast.makeText(PatientLogin.this, "Access Denied!", Toast.LENGTH_SHORT).show();
+                    } else {
+                        mAuth.signInWithEmailAndPassword(email, password)
+                                .addOnCompleteListener(PatientLogin.this, new OnCompleteListener<AuthResult>() {
+                                    @Override
+                                    public void onComplete(@NonNull Task<AuthResult> task) {
+                                        Log.d(TAG, "signInWithEmail:onComplete:" + task.isSuccessful());
+                                        if (task.isSuccessful()) {
+                                            Intent UserHomepage = new Intent(PatientLogin.this, Navigation.class);
+                                            startActivity(UserHomepage);
+                                        } else if (!task.isSuccessful()) {
+                                            Log.w(TAG, "signInWithEmail", task.getException());
+                                            Toast.makeText(PatientLogin.this, "Authentication failed.",
+                                                    Toast.LENGTH_SHORT).show();
+                                            Intent UserHomepage = new Intent(PatientLogin.this, PatientLogin.class);
+                                            startActivity(UserHomepage);
+                                        }
+
+                                    }
+                                });
+                    }
+
+                     }else
+                {
+                    Toast.makeText(PatientLogin.this, "No Internet Connection,Please check your internet connection.", Toast.LENGTH_SHORT).show();
+
                 }
+
+
 
             }
 
