@@ -65,13 +65,13 @@ public class PatientRegister extends AppCompatActivity {
             public void onClick(View v) {
                ConnectionDetector cd;
 
-                cd = new ConnectionDetector(getApplicationContext());
+               /* cd = new ConnectionDetector(getApplicationContext());
                 // get Internet status
                 isInternetPresent = cd.isConnectingToInternet();
                 // check for Internet status
 
                 if (isInternetPresent) {
-
+*/
                 String email = txtEmail.getText().toString().trim();
                 String password = txtPassword.getText().toString().trim();
                 String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
@@ -104,11 +104,11 @@ public class PatientRegister extends AppCompatActivity {
                             });
                 }
 
-           }else
+          /* }else
             {
                 Toast.makeText(PatientRegister.this, "No Internet Connection,Please check your internet connection.", Toast.LENGTH_SHORT).show();
 
-            }
+            }*/
 
             }
         });
@@ -158,6 +158,9 @@ public class PatientRegister extends AppCompatActivity {
         writeNewAppointment(userAppointmentDate,AppointmentId,userAppointmentTime, userDateofBirth, userDoctorName, userLastname,userPhoneno, DoctorId,PatientID, uid, user.getUid());
 
         writeNewAppointments(userAppointmentDate,userAppointmentTime,DoctorId,userDoctorName, uid);
+
+      //  writeNewDocAppointments(userAppointmentDate,AppointmentId,userAppointmentTime, userLastname, PatientID, uid );
+
         Toast.makeText(PatientRegister.this, "Welcome to the Appointments Booking and Prescription Viewer", Toast.LENGTH_LONG).show();
         Intent takeUserHome = new Intent(PatientRegister.this, Navigation.class);
         startActivity(takeUserHome);
@@ -195,7 +198,13 @@ public class PatientRegister extends AppCompatActivity {
             NewAppointments newAppointments=new NewAppointments(AppointmentDateA, AppointmentTimeA,DoctorIDA,DoctorNameA);
 
         mDatabase.child("newappointment").child(userId).child("app1").setValue(newAppointments);
-    };
+    }
+
+   /* public void writeNewDocAppointments (String AppointmentDateD, String AppointmentIDD, String AppointmentTimeD, String LastNameD, String PatientIDD,String userId){
+
+        DoctorDetails doctorDetails= new DoctorDetails(AppointmentDateD, AppointmentIDD,AppointmentTimeD, LastNameD,PatientIDD );
+
+        mDatabase.child("doctorappointments").child(userId).setValue(doctorDetails);*/
     @Override
     public void onStop() {
         super.onStop();

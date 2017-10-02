@@ -16,6 +16,7 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.ganesha.abpv.MainActivities.MainActivities.BaseActivity;
 import com.example.ganesha.abpv.MainActivities.MainActivities.Model.PersonalDetails;
 import com.example.ganesha.abpv.MainActivities.MainActivities.Model.Users;
 import com.example.ganesha.abpv.MainActivities.MainActivities.Patient.FragmentSupport;
@@ -72,7 +73,7 @@ public class AddDetailsF extends Fragment {
         }
         try{
 
-             Toast.makeText(getActivity(), "Please Update your Profile", Toast.LENGTH_SHORT).show();
+
 
         // Inflate the layout for this fragment
         view = inflater.inflate(R.layout.fragment_add_details, container, false);
@@ -85,11 +86,30 @@ public class AddDetailsF extends Fragment {
         mAuth = FirebaseAuth.getInstance();
 
         txtFirstName = (EditText) view.findViewById(R.id.editFirstName);
+            txtFirstName.requestFocus();
         txtLastName = (EditText) view.findViewById(R.id.editLastName);
         txtDOB = (EditText) view.findViewById(R.id.editDOB);
         txtPhoneNo = (EditText) view.findViewById(R.id.editPhoneNo);
         btnSubmit = (Button) view.findViewById(R.id.btnAddDetails);
 
+
+            mDatabase = FirebaseDatabase.getInstance().getReference();
+            mDatabase.child("users").child(new BaseActivity().getUid()).addValueEventListener(new ValueEventListener() {
+                public void onDataChange(DataSnapshot dataSnapshot) {
+                    Users user = dataSnapshot.getValue(Users.class);
+                    Bundle bundle = new Bundle();
+
+                    if (user.DOB.isEmpty()) {
+                        // User is null, error out
+                        Toast.makeText(getActivity(), "Please Update your Profile", Toast.LENGTH_SHORT).show();
+                    }
+                }
+
+                @Override
+                public void onCancelled(DatabaseError databaseError) {
+
+                }
+            });
 
         ArrayAdapter<String> adapter = new ArrayAdapter<>(getActivity(), android.R.layout.select_dialog_singlechoice, state);
         txtGender = (AutoCompleteTextView) view.findViewById(R.id.editGender);

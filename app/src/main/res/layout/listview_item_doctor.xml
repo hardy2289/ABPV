@@ -12,68 +12,69 @@
             android:id="@+id/ranklabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="  Doctor ID                      :  "
-            android:textColor="@android:color/background_dark"
-            android:textSize="@dimen/font_size"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
-            android:layout_alignLeft="@+id/populationlabel"
-            android:layout_alignStart="@+id/populationlabel" />
+            android:text="  Appointment ID             : "
+            android:textColor="@android:color/background_dark"
+            android:textSize="@dimen/font_size" />
 
         <TextView
-            android:id="@+id/Doctor_id"
+            android:id="@+id/AppointmentIDD"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="011"
+            android:text="111"
             android:textColor="@android:color/holo_red_dark"
             android:textSize="@dimen/font_size"
             android:layout_alignParentTop="true"
-            android:layout_toRightOf="@+id/ranklabel"
-            android:layout_toEndOf="@+id/ranklabel" />
+            android:layout_toRightOf="@+id/populationlabel1"
+            android:layout_toEndOf="@+id/populationlabel1" />
 
         <TextView
             android:id="@+id/countrylabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="  Doctor Name               :  "
-            android:textColor="@android:color/background_dark"
-            android:textSize="@dimen/font_size"
-            android:layout_below="@+id/ranklabel"
             android:layout_alignLeft="@+id/ranklabel"
-            android:layout_alignStart="@+id/ranklabel" />
+            android:layout_alignStart="@+id/ranklabel"
+            android:layout_below="@+id/ranklabel"
+            android:text="  Appointment Date        :  "
+            android:textColor="@android:color/background_dark"
+            android:textSize="@dimen/font_size" />
 
         <TextView
-            android:id="@+id/Doctor_name"
+            android:id="@+id/AppointmentDateD"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="DR Bakari"
+            android:layout_alignBaseline="@+id/countrylabel"
+            android:layout_alignBottom="@+id/countrylabel"
+            android:layout_toEndOf="@+id/countrylabel"
+            android:layout_toRightOf="@+id/countrylabel"
+            android:text="04/10/2017"
             android:textColor="@android:color/background_dark"
-            android:textSize="@dimen/font_size"
-            android:layout_below="@+id/Doctor_id"
-            android:layout_toRightOf="@+id/ranklabel"
-            android:layout_toEndOf="@+id/ranklabel" />
+            android:textSize="@dimen/font_size" />
 
         <TextView
             android:id="@+id/populationlabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="  Appointment Date      :  "
-            android:textColor="@android:color/background_dark"
-            android:textSize="@dimen/font_size"
-            android:layout_below="@+id/countrylabel"
             android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/countrylabel"
+            android:text="  Appointment Time        : "
+            android:textColor="@android:color/background_dark"
+            android:textSize="@dimen/font_size" />
 
         <TextView
-            android:id="@+id/Appointment_Date"
+            android:id="@+id/AppointmentTimeD"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="28 September 2017"
-            android:textColor="@android:color/background_dark"
-            android:textSize="@dimen/font_size"
             android:layout_alignBaseline="@+id/populationlabel"
             android:layout_alignBottom="@+id/populationlabel"
+            android:layout_toEndOf="@+id/populationlabel"
             android:layout_toRightOf="@+id/populationlabel"
-            android:layout_toEndOf="@+id/populationlabel" />
+            android:text="14:10"
+            android:textColor="@android:color/background_dark"
+            android:textSize="@dimen/font_size" />
 
         <TextView
             android:id="@+id/populationlabel1"
@@ -81,18 +82,38 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/populationlabel"
             android:layout_toLeftOf="@+id/Appointment_Date"
-            android:text="  Appointment Time      :  "
+            android:text="  Patient ID                       :  "
             android:textColor="@android:color/background_dark"
             android:textSize="@dimen/font_size" />
 
         <TextView
-            android:id="@+id/Appointment_Time"
+            android:id="@+id/PatientIDD"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignTop="@+id/populationlabel1"
             android:layout_toEndOf="@+id/populationlabel1"
             android:layout_toRightOf="@+id/populationlabel1"
-            android:text="04:10"
+            android:text="41"
+            android:textColor="@android:color/background_dark"
+            android:textSize="@dimen/font_size" />
+
+        <TextView
+            android:id="@+id/populationlabel12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/populationlabel1"
+            android:layout_toLeftOf="@+id/Appointment_Date"
+            android:text="  Last Name                     :  "
+            android:textColor="@android:color/background_dark"
+            android:textSize="@dimen/font_size" />
+
+        <TextView
+            android:id="@+id/LastNameD"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/PatientIDD"
+            android:layout_toRightOf="@+id/populationlabel12"
+            android:text="Tailor"
             android:textColor="@android:color/background_dark"
             android:textSize="@dimen/font_size" />
 

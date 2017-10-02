@@ -47,6 +47,7 @@ public class DoctorLogin extends AppCompatActivity implements GoogleApiClient.On
 
         cd = new ConnectionDetector(getApplicationContext());
         txtEmailDL=(EditText) findViewById(R.id.editDoctorEmailLogin);
+        txtEmailDL.requestFocus();
         txtPasswordDL=(EditText) findViewById(R.id.edit_doctor_password);
         btnDoctorLoginDL=(Button) findViewById(R.id.btn_doctor_login);
         btnGoogleLoginDL=(Button) findViewById(R.id.btn_doctor_google_login);
@@ -82,14 +83,14 @@ public class DoctorLogin extends AppCompatActivity implements GoogleApiClient.On
             public void onClick(View v){
 
 
-                ConnectionDetector cd;
+              /*  ConnectionDetector cd;
 
                 cd = new ConnectionDetector(getApplicationContext());
                 // get Internet status
                 isInternetPresent = cd.isConnectingToInternet();
                 // check for Internet status
 
-                if (isInternetPresent) {
+                if (isInternetPresent) { */
 
 
 
@@ -143,12 +144,12 @@ public class DoctorLogin extends AppCompatActivity implements GoogleApiClient.On
                     }
                 }
 
-            }
+           /* }
                 else
                 {
                     Toast.makeText(DoctorLogin.this, "No Internet Connection,Please check your internet connection.", Toast.LENGTH_SHORT).show();
 
-                }
+                } */
 
             }
 

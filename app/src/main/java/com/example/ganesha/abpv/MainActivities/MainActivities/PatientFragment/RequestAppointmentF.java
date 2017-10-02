@@ -23,8 +23,8 @@ import android.widget.TimePicker;
 import android.widget.Toast;
 
 import com.example.ganesha.abpv.MainActivities.MainActivities.Model.AppointmentDetails;
-import com.example.ganesha.abpv.MainActivities.MainActivities.Patient.FragmentSupport;
 import com.example.ganesha.abpv.MainActivities.MainActivities.Model.Users;
+import com.example.ganesha.abpv.MainActivities.MainActivities.Patient.FragmentSupport;
 import com.example.ganesha.abpv.R;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
@@ -97,6 +97,7 @@ public class RequestAppointmentF extends Fragment implements AdapterView.OnItemS
 
             spinnerDoctor = (Spinner) view.findViewById(R.id.RDoctor);
             RAppointmentDatePatient = (EditText) view.findViewById(R.id.RAppointmentDate);
+            RAppointmentDatePatient.requestFocus();
             RAppointmentTimePatient = (EditText) view.findViewById(R.id.RAppointmentTime);
             RPatientNamePatient = (EditText) view.findViewById(R.id.RPatientName);
             RpatientPhone = (EditText) view.findViewById(R.id.PatientPhone);
@@ -120,6 +121,7 @@ public class RequestAppointmentF extends Fragment implements AdapterView.OnItemS
 
 
             // setting onClick listener on editText to select Appointments Time
+            RAppointmentTimePatient.setInputType(0);
             RAppointmentTimePatient.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -140,6 +142,69 @@ public class RequestAppointmentF extends Fragment implements AdapterView.OnItemS
                     mTimePicker.show();
                 }
             });
+
+            // setting onClick Listener on editText to select Appointments Date
+            RAppointmentDatePatient.setInputType(0);
+            RAppointmentDatePatient.setOnClickListener(new View.OnClickListener() {
+
+                @Override
+                public void onClick(View view) {
+
+                    Calendar mAppointmentDate = Calendar.getInstance();
+                    mYear = mAppointmentDate.get(Calendar.YEAR);
+                    mMonth = mAppointmentDate.get(Calendar.MONTH);
+                    mDay = mAppointmentDate.get(Calendar.DAY_OF_MONTH);
+                    DatePickerDialog mDatePicker;
+
+                    mDatePicker = new DatePickerDialog(getActivity(), new DatePickerDialog.OnDateSetListener() {
+
+                        @Override
+                        public void onDateSet(DatePicker datePicker, int i, int i2, int i3) {
+
+                            RAppointmentDatePatient.setText(i3 + "-" + (i2+1) + "-"+ i);
+                        }
+                    }, mDay, mMonth, mYear);//Yes 24 hour time
+
+                    mDatePicker.updateDate(mYear, mMonth, mDay);
+                    long mSetMonth = 262800000*10;
+                    mDatePicker.setTitle("Select Appointments Date");
+                    mDatePicker.getDatePicker().setMinDate(System.currentTimeMillis() + 86400000);
+                    mDatePicker.getDatePicker().setMaxDate(System.currentTimeMillis() - mSetMonth);
+
+                    mDatePicker.show();
+                }
+            });
+
+            RPatientDOB.setInputType(0);
+            RPatientDOB.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Calendar mDateofbirth = Calendar.getInstance();
+                    mYear = mDateofbirth.get(Calendar.YEAR);
+                    mMonth = mDateofbirth.get(Calendar.MONTH);
+                    mDay = mDateofbirth.get(Calendar.DAY_OF_MONTH);
+                    DatePickerDialog mDatePicker;
+
+                    mDatePicker = new DatePickerDialog(getActivity(), new DatePickerDialog.OnDateSetListener() {
+
+                        @Override
+                        public void onDateSet(DatePicker datePicker, int i, int i2, int i3) {
+
+                            RPatientDOB.setText(i3 + "-" + (i2 + 1) + "-" + i);
+                        }
+                    }, mDay, mMonth, mYear);//Yes 24 hour time
+
+                    mDatePicker.setTitle("Select Date of Birth");
+                    mDatePicker.updateDate(mYear - 18, mMonth, mDay);
+                    mDateofbirth.set(mYear - 18, mMonth, mDay);
+                    //mDatePicker.getDatePicker().setMaxDate(System.currentTimeMillis());
+                    mDatePicker.getDatePicker().setMaxDate(mDateofbirth.getTimeInMillis());
+
+                    mDatePicker.show();
+
+                }
+            });
+
 
 
             mAppointmentDate.addValueEventListener(new ValueEventListener() {
@@ -222,65 +287,6 @@ public class RequestAppointmentF extends Fragment implements AdapterView.OnItemS
                 }
             });
 
-            // setting onClick Listener on editText to select Appointments Date
-            RAppointmentDatePatient.setOnClickListener(new View.OnClickListener() {
-
-                @Override
-                public void onClick(View view) {
-
-                    Calendar mAppointmentDate = Calendar.getInstance();
-                    mYear = mAppointmentDate.get(Calendar.YEAR);
-                    mMonth = mAppointmentDate.get(Calendar.MONTH);
-                    mDay = mAppointmentDate.get(Calendar.DAY_OF_MONTH);
-                    DatePickerDialog mDatePicker;
-
-                    mDatePicker = new DatePickerDialog(getActivity(), new DatePickerDialog.OnDateSetListener() {
-
-                        @Override
-                        public void onDateSet(DatePicker datePicker, int i, int i2, int i3) {
-
-                            RAppointmentDatePatient.setText(i3 + "-" + (i2+1) + "-"+ i);
-                        }
-                    }, mDay, mMonth, mYear);//Yes 24 hour time
-
-                    mDatePicker.updateDate(mYear, mMonth, mDay);
-                    long mSetMonth = 262800000*10;
-                    mDatePicker.setTitle("Select Appointments Date");
-                    mDatePicker.getDatePicker().setMinDate(System.currentTimeMillis() + 86400000);
-                    mDatePicker.getDatePicker().setMaxDate(System.currentTimeMillis() - mSetMonth);
-
-                    mDatePicker.show();
-                }
-            });
-
-            RPatientDOB.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Calendar mDateofbirth = Calendar.getInstance();
-                    mYear = mDateofbirth.get(Calendar.YEAR);
-                    mMonth = mDateofbirth.get(Calendar.MONTH);
-                    mDay = mDateofbirth.get(Calendar.DAY_OF_MONTH);
-                    DatePickerDialog mDatePicker;
-
-                    mDatePicker = new DatePickerDialog(getActivity(), new DatePickerDialog.OnDateSetListener() {
-
-                        @Override
-                        public void onDateSet(DatePicker datePicker, int i, int i2, int i3) {
-
-                            RPatientDOB.setText(i3 + "-" + (i2 + 1) + "-" + i);
-                        }
-                    }, mDay, mMonth, mYear);//Yes 24 hour time
-
-                    mDatePicker.setTitle("Select Date of Birth");
-                    mDatePicker.updateDate(mYear - 18, mMonth, mDay);
-                    mDateofbirth.set(mYear - 18, mMonth, mDay);
-                    //mDatePicker.getDatePicker().setMaxDate(System.currentTimeMillis());
-                    mDatePicker.getDatePicker().setMaxDate(mDateofbirth.getTimeInMillis());
-
-                    mDatePicker.show();
-
-                }
-            });
 
             RAppointmentRequestbtn.setOnClickListener(new View.OnClickListener() {
                 @Override

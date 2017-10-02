@@ -5,136 +5,136 @@
     tools:context="com.example.ganesha.abpv.MainActivities.MainActivities.PatientFragment.AddDetailsF">
 
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="#99257bd7"
+        android:paddingBottom="16dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingTop="16dp"
+        tools:layout_editor_absoluteY="8dp">
 
-        <RelativeLayout
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="Add Personal Details"
+            android:textColor="@android:color/background_light"
+            android:textSize="18dp"
+            android:textStyle="bold|italic" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="5dp"
+            android:layout_below="@+id/textView3"
+            android:layout_marginTop="5dp"
+            android:background="@android:color/background_dark"
+            android:orientation="horizontal">
+
+
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/editPhoneNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
             android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/editGender"
+            android:drawableRight="@android:drawable/ic_menu_call"
+            android:hint="Phone No"
+            android:maxLength="11"
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/background_light" />
+
+        <EditText
+            android:id="@+id/editFirstName"
+            android:layout_width="305dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
-            android:background="#99257bd7"
-            android:paddingBottom="16dp"
-            android:paddingLeft="8dp"
-            android:paddingRight="8dp"
-            android:paddingTop="16dp"
-            tools:layout_editor_absoluteY="8dp">
+            android:layout_marginTop="89dp"
+            android:hint="First Name"
+            android:inputType="textPersonName"
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/background_light" />
 
-            <TextView
-                android:id="@+id/textView3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
-                android:layout_centerHorizontal="true"
-                android:layout_marginBottom="5dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:text="Add Personal Details"
-                android:textColor="@android:color/background_light"
-                android:textSize="18dp"
-                android:textStyle="bold|italic" />
+        <AutoCompleteTextView
+            android:id="@+id/editGender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/editDOB"
+            android:layout_marginTop="6dp"
+            android:ems="10"
+            android:hint="Gender"
+            android:inputType="textAutoComplete"
+            android:maxLength="6"
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/background_light"></AutoCompleteTextView>
 
-            <LinearLayout
-                android:id="@+id/linearLayout"
-                android:layout_width="match_parent"
-                android:layout_height="5dp"
-                android:layout_below="@+id/textView3"
-                android:layout_marginTop="5dp"
-                android:background="@android:color/background_dark"
-                android:orientation="horizontal">
-
-
-            </LinearLayout>
-
-            <EditText
-                android:id="@+id/editPhoneNo"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentStart="true"
-                android:layout_below="@+id/editDOB"
-                android:layout_marginTop="35dp"
-                android:drawableRight="@android:drawable/ic_menu_call"
-                android:hint="Phone No"
-                android:maxLength="11"
-                android:textColor="@android:color/black"
-                android:textColorHint="@android:color/background_light" />
-
-            <EditText
-                android:id="@+id/editFirstName"
-                android:layout_width="305dp"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:layout_marginTop="89dp"
-                android:hint="First Name"
-                android:inputType="textPersonName"
-                android:textColor="@android:color/black"
-                android:textColorHint="@android:color/background_light" />
-
-            <AutoCompleteTextView
-                android:id="@+id/editGender"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_below="@+id/editDOB"
-                android:ems="10"
-                android:hint="Gender"
-                android:inputType="textAutoComplete"
-                android:maxLength="6"
-                android:textColor="@android:color/black"
-                android:textColorHint="@android:color/background_light"></AutoCompleteTextView>
-
-            <EditText
-                android:id="@+id/editLastName"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_below="@+id/editFirstName"
-                android:hint="Last Name"
-                android:inputType="textPersonName"
-                android:textColor="@android:color/black"
-                android:textColorHint="@android:color/background_light" />
+        <EditText
+            android:id="@+id/editLastName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/editFirstName"
+            android:layout_marginTop="8dp"
+            android:hint="Last Name"
+            android:inputType="textPersonName"
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/background_light" />
 
 
-            <EditText
-                android:id="@+id/editDOB"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/editLastName"
-                android:clickable="true"
-                android:drawableRight="@android:drawable/ic_menu_my_calendar"
-                android:ems="12"
-                android:focusable="false"
-                android:hint="Date of Birth     DD/MM/YYYY"
-                android:inputType="date"
-                android:maxLength="10"
-                android:textColor="@android:color/black"
-                android:textColorHint="@android:color/background_light" />
+        <EditText
+            android:id="@+id/editDOB"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:drawableRight="@android:drawable/ic_menu_my_calendar"
+            android:ems="12"
+            android:focusable="false"
+            android:hint="Date of Birth     DD/MM/YYYY"
+            android:inputType="date"
+            android:maxLength="10"
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/background_light"
+            android:layout_below="@+id/editLastName"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
 
 
-            <Button
-                android:id="@+id/btnAddDetails"
-                android:layout_width="150dp"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/editPhoneNo"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="87dp"
-                android:background="@drawable/button"
-                android:text=" Add  Details"
-                android:textColor="@color/bright_foreground_inverse_material_light"
-                android:textSize="17dp" />
+        <Button
+            android:id="@+id/btnAddDetails"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editPhoneNo"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="87dp"
+            android:background="@drawable/button"
+            android:text=" Add  Details"
+            android:textColor="@color/bright_foreground_inverse_material_light"
+            android:textSize="17dp" />
 
 
-        </RelativeLayout>
-
-
+    </RelativeLayout>
 
 
 </FrameLayout>

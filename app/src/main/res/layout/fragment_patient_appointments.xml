@@ -12,24 +12,6 @@
         >
 
 
-        <ListView
-            android:id="@+id/DoctorListView"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_below="@+id/relativeLayout"
-            android:layout_marginBottom="5dp"
-            android:background="#99257bd7"
-            android:divider="@android:color/transparent"
-            android:dividerHeight="2dp"
-            android:fastScrollEnabled="true"
-            android:footerDividersEnabled="true"
-            android:headerDividersEnabled="true"
-            android:listSelector="@android:color/holo_orange_light"
-            android:longClickable="true" />
-
-
         <RelativeLayout
             android:id="@+id/relativeLayout"
             android:layout_width="match_parent"
@@ -53,16 +35,19 @@
                 android:textColor="@android:color/background_dark" />
         </RelativeLayout>
 
-        <TextView
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/doctor_app_list"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="No Appointments Booked"
-            android:id="@+id/NoDocApp"
-            android:layout_centerVertical="true"
-            android:layout_centerHorizontal="true"
-            android:background="@android:drawable/alert_light_frame"
-            android:textColor="@android:color/background_dark"
-            android:gravity="center" />
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/relativeLayout"
+            android:background="@color/cardview_light_background"
+            android:clipToPadding="false"
+            android:padding="5dp"
+            android:scrollbars="vertical"
+            tools:listitem="@layout/listview_app_doc_display" />
 
     </RelativeLayout>
 

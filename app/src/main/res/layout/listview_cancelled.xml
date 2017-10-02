@@ -9,28 +9,6 @@
         android:layout_height="match_parent">
 
         <TextView
-            android:id="@+id/ranklabel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="  Doctor ID                      :  "
-            android:textColor="@android:color/background_dark"
-            android:textSize="@dimen/font_size"
-            android:layout_alignParentTop="true"
-            android:layout_alignLeft="@+id/populationlabel"
-            android:layout_alignStart="@+id/populationlabel" />
-
-        <TextView
-            android:id="@+id/Doctor_id"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="011"
-            android:textColor="@android:color/holo_red_dark"
-            android:textSize="@dimen/font_size"
-            android:layout_alignParentTop="true"
-            android:layout_toRightOf="@+id/ranklabel"
-            android:layout_toEndOf="@+id/ranklabel" />
-
-        <TextView
             android:id="@+id/countrylabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -42,15 +20,15 @@
             android:layout_alignStart="@+id/ranklabel" />
 
         <TextView
-            android:id="@+id/Doctor_name"
+            android:id="@+id/Doctor_name_Cancelled"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="DR Bakari"
             android:textColor="@android:color/background_dark"
             android:textSize="@dimen/font_size"
-            android:layout_below="@+id/Doctor_id"
-            android:layout_toRightOf="@+id/ranklabel"
-            android:layout_toEndOf="@+id/ranklabel" />
+            android:layout_toRightOf="@+id/countrylabel"
+            android:layout_toEndOf="@+id/countrylabel"
+            android:layout_alignParentTop="true" />
 
         <TextView
             android:id="@+id/populationlabel"
@@ -64,7 +42,7 @@
             android:layout_alignParentStart="true" />
 
         <TextView
-            android:id="@+id/Appointment_Date"
+            android:id="@+id/Appointment_Date_Cancelled"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="28 September 2017"
@@ -86,7 +64,7 @@
             android:textSize="@dimen/font_size" />
 
         <TextView
-            android:id="@+id/Appointment_Time"
+            android:id="@+id/Appointment_Time_Cancelled"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignTop="@+id/populationlabel1"

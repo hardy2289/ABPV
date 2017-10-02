@@ -1,4 +1,5 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -7,44 +8,42 @@
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:clickable="false"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools">
+        android:clickable="false">
 
 
         <RelativeLayout
 
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
             android:background="#99257bd7"
             android:paddingBottom="16dp"
             android:paddingLeft="8dp"
             android:paddingRight="8dp"
             android:paddingTop="16dp"
             app:layout_constraintRight_toRightOf="parent"
-            tools:layout_editor_absoluteY="8dp"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true">
+            tools:layout_editor_absoluteY="8dp">
 
 
             <EditText
                 android:id="@+id/txtPatientDate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:inputType="date"
-                android:clickable="true"
-                android:hint="Patient DOB    DD/MM/YYYY"
-                android:textColor="@android:color/black"
-                android:textColorHint="@android:color/background_light"
-                android:textSize="16dp"
-                android:drawableRight="@android:drawable/ic_menu_my_calendar"
-                android:layout_marginTop="7dp"
-                android:layout_below="@+id/RPatientName"
-                android:layout_alignParentRight="true"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true" />
+                android:layout_alignParentRight="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/RPatientName"
+                android:layout_marginTop="7dp"
+                android:clickable="true"
+                android:drawableRight="@android:drawable/ic_menu_my_calendar"
+                android:hint="Patient DOB    DD/MM/YYYY"
+                android:inputType="date"
+                android:textColor="@android:color/black"
+                android:textColorHint="@android:color/background_light"
+                android:textSize="16dp" />
 
             <EditText
                 android:id="@+id/RAppointmentDate"
@@ -69,29 +68,28 @@
                 style="@android:style/ButtonBar"
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="55dp"
                 android:background="@drawable/button"
                 android:clickable="true"
                 android:text="Request Appointment"
                 android:textColor="@color/bright_foreground_inverse_material_light"
-                android:textSize="15dp"
-                android:layout_alignParentBottom="true"
-                android:layout_centerHorizontal="true"
-                android:layout_marginBottom="55dp" />
-
-
+                android:textSize="15dp" />
 
 
             <EditText
                 android:id="@+id/RPatientName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/RAppointmentTime"
+                android:layout_marginTop="12dp"
                 android:hint="Patient Name"
                 android:inputType="textPersonName"
                 android:textColor="@android:color/black"
-                android:textColorHint="@android:color/background_light"
-                android:layout_below="@+id/RAppointmentTime"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true" />
+                android:textColorHint="@android:color/background_light" />
 
             <LinearLayout
                 android:id="@+id/linearLayout"
@@ -113,13 +111,13 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true"
+                android:layout_marginBottom="5dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="7dp"
-                android:layout_marginBottom="5dp"
                 android:text="Appointment Request"
-                android:textColorHint="@android:color/background_light"
                 android:textColor="@android:color/background_light"
+                android:textColorHint="@android:color/background_light"
                 android:textSize="18dp"
                 android:textStyle="bold" />
 
@@ -127,15 +125,15 @@
                 android:id="@+id/RDoctor"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
+                android:layout_alignEnd="@+id/RAppointmentTime"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignRight="@+id/RAppointmentTime"
                 android:layout_below="@+id/textView2"
                 android:background="@android:color/background_light"
                 android:focusable="false"
                 android:spinnerMode="dialog"
-                android:textColor="@android:color/black"
-                android:layout_alignRight="@+id/RAppointmentTime"
-                android:layout_alignEnd="@+id/RAppointmentTime"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true">
+                android:textColor="@android:color/black">
 
             </Spinner>
 
@@ -143,56 +141,54 @@
                 android:id="@+id/PatientPhone"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/txtPatientDate"
                 android:drawableRight="@android:drawable/ic_menu_call"
                 android:hint="Patient Contact No"
                 android:inputType="number|textPhonetic"
                 android:textColor="@android:color/black"
                 android:textColorHint="@android:color/background_light"
-                android:textSize="16dp"
-                android:layout_below="@+id/txtPatientDate"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true" />
+                android:textSize="16dp" />
 
             <EditText
                 android:id="@+id/RAppointmentTime"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="9dp"
+                android:layout_marginTop="16dp"
                 android:clickable="true"
                 android:focusable="false"
                 android:hint="Appointment Time"
-                android:textSize="16dp"
-                android:textColorHint="@android:color/background_light"
                 android:inputType="time"
                 android:textColor="@android:color/black"
+                android:textColorHint="@android:color/background_light"
+                android:textSize="16dp"
                 android:layout_below="@+id/RAppointmentDate"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true"
                 android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true" />
-
+                android:layout_alignParentStart="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
 
 
             <TextView
                 android:id="@+id/textView2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/textView4"
+                android:layout_alignStart="@+id/textView4"
+                android:layout_below="@+id/linearLayout"
                 android:layout_marginTop="20dp"
                 android:text="Select Doctor"
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:textColor="@android:color/background_light"
-                android:textSize="14dp"
-                android:layout_below="@+id/linearLayout"
-                android:layout_alignLeft="@+id/textView4"
-                android:layout_alignStart="@+id/textView4" />
+                android:textSize="14dp" />
 
 
         </RelativeLayout>
 
     </RelativeLayout>
-
 
 
 </FrameLayout>

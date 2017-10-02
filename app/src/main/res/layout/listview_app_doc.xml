@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/ranklabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:text="  Appointment ID             : "
+            android:textColor="@android:color/background_dark"
+            android:textSize="@dimen/font_size" />
+
+        <TextView
+            android:id="@+id/AppointmentIDDA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/ranklabel"
+            android:text="111"
+            android:textColor="@android:color/holo_red_dark"
+            android:textSize="@dimen/font_size" />
+
+        <TextView
+            android:id="@+id/countrylabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/ranklabel"
+            android:layout_alignStart="@+id/ranklabel"
+            android:layout_below="@+id/ranklabel"
+            android:text="  Appointment Date        :  "
+            android:textColor="@android:color/background_dark"
+            android:textSize="@dimen/font_size" />
+
+        <TextView
+            android:id="@+id/AppointmentDateDA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/countrylabel"
+            android:layout_alignBottom="@+id/countrylabel"
+            android:layout_toEndOf="@+id/countrylabel"
+            android:layout_toRightOf="@+id/countrylabel"
+            android:text="04/10/2017"
+            android:textColor="@android:color/background_dark"
+            android:textSize="@dimen/font_size" />
+
+        <TextView
+            android:id="@+id/populationlabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/countrylabel"
+            android:text="  Appointment Time        : "
+            android:textColor="@android:color/background_dark"
+            android:textSize="@dimen/font_size" />
+
+        <TextView
+            android:id="@+id/AppointmentTimeDA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/populationlabel"
+            android:layout_alignBottom="@+id/populationlabel"
+            android:layout_toEndOf="@+id/populationlabel"
+            android:layout_toRightOf="@+id/populationlabel"
+            android:text="14:10"
+            android:textColor="@android:color/background_dark"
+            android:textSize="@dimen/font_size" />
+
+
+
+    </RelativeLayout>
+
+</LinearLayout>
