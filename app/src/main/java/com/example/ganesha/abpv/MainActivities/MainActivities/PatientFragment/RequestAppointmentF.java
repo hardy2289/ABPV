@@ -67,6 +67,7 @@ public class RequestAppointmentF extends Fragment implements AdapterView.OnItemS
     private DatabaseReference mAppointmentID;
     private DatabaseReference mAppointmentTime;
     private DatabaseReference mDoctorName;
+
     private DatabaseReference mPatientDOB;
     private DatabaseReference mPatientName;
     private DatabaseReference mPatientNo;
@@ -90,10 +91,11 @@ public class RequestAppointmentF extends Fragment implements AdapterView.OnItemS
 
             mAppointmentDate = mDatabase.child("appointments").child(userId).child("AppointmentDate");
             mAppointmentTime = mDatabase.child("appointments").child(userId).child("AppointmentTime");
-            mPatientDOB = mDatabase.child("appointments").child(userId).child("DOB");
             mDoctorName = mDatabase.child("appointments").child(userId).child("DoctorName");
-            mPatientName = mDatabase.child("appointments").child(userId).child("LastName");
-            mPatientNo = mDatabase.child("appointments").child(userId).child("PhoneNo");
+
+            mPatientName = mDatabase.child("users").child(userId).child("LastName");
+            mPatientDOB = mDatabase.child("users").child(userId).child("DOB");
+            mPatientNo = mDatabase.child("users").child(userId).child("PhoneNo");
 
             spinnerDoctor = (Spinner) view.findViewById(R.id.RDoctor);
             RAppointmentDatePatient = (EditText) view.findViewById(R.id.RAppointmentDate);
@@ -104,6 +106,44 @@ public class RequestAppointmentF extends Fragment implements AdapterView.OnItemS
             RAppointmentRequestbtn = (Button) view.findViewById(R.id.Request);
             RPatientDOB =(EditText) view.findViewById(R.id.txtPatientDate);
 
+            mPatientName.addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(DataSnapshot dataSnapshot) {
+                    String text = dataSnapshot.getValue(String.class);
+                    RPatientNamePatient.setText(text);
+                }
+
+                @Override
+                public void onCancelled(DatabaseError databaseError) {
+
+                }
+            });
+
+            mPatientDOB.addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(DataSnapshot dataSnapshot) {
+                    String text = dataSnapshot.getValue(String.class);
+                    RPatientDOB.setText(text);
+                }
+
+                @Override
+                public void onCancelled(DatabaseError databaseError) {
+
+                }
+            });
+
+            mPatientNo.addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(DataSnapshot dataSnapshot) {
+                    String text = dataSnapshot.getValue(String.class);
+                    RpatientPhone.setText(text);
+                }
+
+                @Override
+                public void onCancelled(DatabaseError databaseError) {
+
+                }
+            });
 
             ArrayAdapter<String> adapter_state = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_spinner_dropdown_item, state);
 

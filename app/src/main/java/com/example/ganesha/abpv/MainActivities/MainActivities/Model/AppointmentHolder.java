@@ -17,7 +17,9 @@ public class AppointmentHolder extends RecyclerView.ViewHolder {
     public TextView aAppointmentTime;
     public TextView aDoctorID;
     public TextView aDoctorName;
+
     public ImageView remove;
+
 
     public AppointmentHolder(View itemView) {
         super(itemView);
@@ -27,9 +29,11 @@ public class AppointmentHolder extends RecyclerView.ViewHolder {
         aAppointmentTime = (TextView) itemView.findViewById(R.id.Appointment_Time);
         aDoctorID = (TextView) itemView.findViewById(R.id.Doctor_id);
         aDoctorName = (TextView) itemView.findViewById(R.id.Doctor_name);
+
+
+
         remove=(ImageView) itemView.findViewById(R.id.imageView12);
 
     }
-
 
 }

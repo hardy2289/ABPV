@@ -9,26 +9,47 @@
         android:layout_height="match_parent"
         android:paddingBottom="16dp">
 
+
         <RelativeLayout
             android:id="@+id/relativeLayout"
             android:layout_width="match_parent"
             android:layout_height="25dp"
-            android:background="@android:color/holo_green_light"
-            android:layout_alignParentTop="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:layout_marginTop="15dp">
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="15dp"
+            android:background="@android:color/holo_green_light">
+
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@android:color/background_dark"
+                android:orientation="horizontal"
+                android:layout_above="@+id/textView"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
 
             <TextView
                 android:id="@+id/textView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
                 android:text="Cancelled Appointment History"
                 android:textColor="@android:color/background_dark"
                 android:textSize="18dp"
-                android:textStyle="bold|italic"
-                android:layout_centerVertical="true"
-                android:layout_centerHorizontal="true" />
+                android:textStyle="bold|italic" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout1"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@android:color/background_dark"
+                android:orientation="horizontal"
+                android:layout_below="@+id/textView"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
 
         </RelativeLayout>
 
@@ -44,7 +65,6 @@
             android:padding="5dp"
             android:scrollbars="vertical"
             tools:listitem="@layout/listview_cancelled_display" />
-
 
 
     </RelativeLayout>

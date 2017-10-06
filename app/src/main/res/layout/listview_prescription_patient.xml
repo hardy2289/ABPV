@@ -20,7 +20,7 @@
             android:textSize="@dimen/font_size" />
 
         <TextView
-            android:id="@+id/AppointmentIDD"
+            android:id="@+id/AppointmentIDP"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="111"
@@ -30,64 +30,20 @@
             android:layout_toRightOf="@+id/populationlabel1"
             android:layout_toEndOf="@+id/populationlabel1" />
 
-        <TextView
-            android:id="@+id/countrylabel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/ranklabel"
-            android:layout_alignStart="@+id/ranklabel"
-            android:layout_below="@+id/ranklabel"
-            android:text="  Appointment Date        :  "
-            android:textColor="@android:color/background_dark"
-            android:textSize="@dimen/font_size" />
 
-        <TextView
-            android:id="@+id/AppointmentDateD"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBaseline="@+id/countrylabel"
-            android:layout_alignBottom="@+id/countrylabel"
-            android:layout_toEndOf="@+id/countrylabel"
-            android:layout_toRightOf="@+id/countrylabel"
-            android:text="04/10/2017"
-            android:textColor="@android:color/background_dark"
-            android:textSize="@dimen/font_size" />
-
-        <TextView
-            android:id="@+id/populationlabel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_below="@+id/countrylabel"
-            android:text="  Appointment Time        : "
-            android:textColor="@android:color/background_dark"
-            android:textSize="@dimen/font_size" />
-
-        <TextView
-            android:id="@+id/AppointmentTimeD"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBaseline="@+id/populationlabel"
-            android:layout_alignBottom="@+id/populationlabel"
-            android:layout_toEndOf="@+id/populationlabel"
-            android:layout_toRightOf="@+id/populationlabel"
-            android:text="14:10"
-            android:textColor="@android:color/background_dark"
-            android:textSize="@dimen/font_size" />
 
         <TextView
             android:id="@+id/populationlabel1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/populationlabel"
+            android:layout_below="@+id/ranklabel"
             android:layout_toLeftOf="@+id/Appointment_Date"
             android:text="  Patient ID                       :  "
             android:textColor="@android:color/background_dark"
             android:textSize="@dimen/font_size" />
 
         <TextView
-            android:id="@+id/PatientIDD"
+            android:id="@+id/PatientIDP"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignTop="@+id/populationlabel1"
@@ -108,17 +64,17 @@
             android:textSize="@dimen/font_size" />
 
         <TextView
-            android:id="@+id/LastNameD"
+            android:id="@+id/LastNameDP"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/PatientIDD"
+            android:layout_below="@+id/PatientIDP"
             android:layout_toRightOf="@+id/populationlabel12"
             android:text="Tailor"
             android:textColor="@android:color/background_dark"
             android:textSize="@dimen/font_size" />
 
         <ImageView
-            android:id="@+id/imageView15"
+            android:id="@+id/imageView16"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_alignParentEnd="true"

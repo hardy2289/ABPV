@@ -2,6 +2,7 @@ package com.example.ganesha.abpv.MainActivities.MainActivities.Model;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.ganesha.abpv.R;
@@ -16,12 +17,15 @@ public class BookedAppointmentHolder extends RecyclerView.ViewHolder{
     public TextView bAppointmentTime;
     public TextView bDoctorName;
 
+    public ImageView removeC;
+
     public BookedAppointmentHolder(View itemView) {
         super(itemView);
-
 
         bAppointmentDate=(TextView)itemView.findViewById(R.id.Appointment_Date_Booked);
         bAppointmentTime = (TextView) itemView.findViewById(R.id.Appointment_Time_Booked);
         bDoctorName = (TextView) itemView.findViewById(R.id.Doctor_name_Booked);
+
+        removeC=(ImageView) itemView.findViewById(R.id.imageView13);
     }
 }

@@ -86,7 +86,7 @@
                 android:layout_alignParentStart="true"
                 android:layout_below="@+id/RAppointmentTime"
                 android:layout_marginTop="12dp"
-                android:hint="Patient Name"
+                android:hint="Patient Last Name"
                 android:inputType="textPersonName"
                 android:textColor="@android:color/black"
                 android:textColorHint="@android:color/background_light" />

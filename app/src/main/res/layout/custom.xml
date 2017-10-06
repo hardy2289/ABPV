@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="200dp"
+    android:background="@android:drawable/dialog_holo_dark_frame">
+
+    <TextView
+        android:id="@+id/ranklabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Doctor ID   :"
+        android:textColor="@android:color/background_light"
+        android:layout_alignBaseline="@+id/Doctor_idc"
+        android:layout_alignBottom="@+id/Doctor_idc"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="22dp"
+        android:layout_marginStart="22dp" />
+
+    <TextView
+        android:id="@+id/Doctor_idc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="3dp"
+        android:layout_marginLeft="5dp"
+        android:text=" 011"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/ranklabel"
+        android:textColor="@android:color/background_light"
+        android:layout_alignRight="@+id/populationlabel2"
+        android:layout_alignEnd="@+id/populationlabel2" />
+
+    <TextView
+        android:id="@+id/countrylabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Doctor Name    :"
+        android:textColor="@android:color/background_light"
+        android:layout_marginTop="9dp"
+        android:layout_below="@+id/Doctor_idc"
+        android:layout_alignLeft="@+id/ranklabel"
+        android:layout_alignStart="@+id/ranklabel" />
+
+    <TextView
+        android:id="@+id/Doctor_namec"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dr Bakari"
+        android:textColor="@android:color/background_light"
+        android:layout_above="@+id/populationlabel"
+        android:layout_alignRight="@+id/Appointment_Timec"
+        android:layout_alignEnd="@+id/Appointment_Timec" />
+
+    <TextView
+        android:id="@+id/populationlabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Appointment Date   :"
+        android:textColor="@android:color/background_light"
+        android:layout_marginTop="12dp"
+        android:layout_below="@+id/countrylabel"
+        android:layout_alignLeft="@+id/countrylabel"
+        android:layout_alignStart="@+id/countrylabel" />
+
+    <TextView
+        android:id="@+id/Appointment_Datec"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:text="04/10/2017"
+        android:textColor="@android:color/background_light"
+        android:layout_alignBaseline="@+id/populationlabel"
+        android:layout_alignBottom="@+id/populationlabel"
+        android:layout_toRightOf="@+id/populationlabel2"
+        android:layout_toEndOf="@+id/populationlabel2"
+        android:layout_marginStart="12dp" />
+
+    <TextView
+        android:id="@+id/populationlabel2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Appointment Time   :"
+        android:textColor="@android:color/background_light"
+        android:layout_marginTop="13dp"
+        android:layout_below="@+id/Appointment_Datec"
+        android:layout_alignLeft="@+id/populationlabel"
+        android:layout_alignStart="@+id/populationlabel" />
+
+    <TextView
+        android:id="@+id/Appointment_Timec"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="14:20"
+        android:textColor="@android:color/background_light"
+        android:layout_alignBaseline="@+id/populationlabel2"
+        android:layout_alignBottom="@+id/populationlabel2"
+        android:layout_alignLeft="@+id/Appointment_Datec"
+        android:layout_alignStart="@+id/Appointment_Datec" />
+
+
+    <Button
+        android:id="@+id/bookappointment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Book Appointment"
+        android:textColor="@android:color/background_light"
+        android:layout_marginTop="9dp"
+        android:layout_below="@+id/populationlabel2"
+        android:layout_toRightOf="@+id/ranklabel"
+        android:layout_toEndOf="@+id/ranklabel" />
+
+
+</RelativeLayout>
+

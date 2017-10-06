@@ -21,6 +21,7 @@ public class NewAppointments extends AppCompatActivity{
     public String AppointmentTimeA;
 
 
+
     public NewAppointments( ) {
         // Default constructor required for calls to DataSnapshot.getValue(Users.class)
     }
@@ -31,6 +32,7 @@ public class NewAppointments extends AppCompatActivity{
         this.AppointmentDateA = AppointmentDateA;
         this.DoctorIDA = DoctorIDA;
         this.AppointmentTimeA = AppointmentTimeAb;
+
     }
     @Exclude
     public Map<String, Object> toMap(){

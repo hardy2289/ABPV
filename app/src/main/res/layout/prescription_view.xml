@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_marginBottom="10dp"
-    android:layout_marginLeft="5dp"
-    android:layout_marginRight="5dp"
-    android:layout_marginTop="20dp"
-    android:background="@android:color/holo_orange_light">
+    android:layout_width="fill_parent"
+    android:layout_height="430dp"
+    android:layout_marginLeft="25dp"
+    android:layout_marginRight="25dp"
+    android:background="#99257bd7"
+
+    >
 
     <TextView
         android:id="@+id/ranklabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/countrylabel"
+        android:layout_marginTop="8dp"
+        android:text="Patient ID                     :"
+        android:textColor="@android:color/background_dark"
+        android:layout_below="@+id/relativeLayout"
         android:layout_alignRight="@+id/countrylabel"
-        android:layout_alignTop="@+id/relativeLayout"
-        android:layout_marginTop="10dp"
-        android:text="Patient ID                    :"
-        android:textColor="@android:color/background_dark" />
+        android:layout_alignEnd="@+id/countrylabel" />
 
     <TextView
         android:id="@+id/patientID"
@@ -26,7 +26,7 @@
         android:layout_alignLeft="@+id/patientName"
         android:layout_alignStart="@+id/patientName"
         android:layout_alignTop="@+id/ranklabel"
-        android:text="IDX1721727"
+        android:text="41"
         android:textColor="@android:color/background_dark" />
 
     <TextView
@@ -36,7 +36,7 @@
         android:layout_alignLeft="@+id/populationlabel"
         android:layout_alignStart="@+id/populationlabel"
         android:layout_below="@+id/ranklabel"
-        android:text="Patient Name             :"
+        android:text="Patient Last Name     :"
         android:textColor="@android:color/background_dark" />
 
     <TextView
@@ -46,7 +46,7 @@
         android:layout_alignLeft="@+id/patient_dob"
         android:layout_alignStart="@+id/patient_dob"
         android:layout_alignTop="@+id/countrylabel"
-        android:text="PETTER"
+        android:text="Tailor"
         android:textColor="@android:color/background_dark" />
 
     <TextView
@@ -89,16 +89,14 @@
         android:layout_marginLeft="18dp"
         android:layout_toEndOf="@+id/populationlabel"
         android:layout_toRightOf="@+id/populationlabel"
-        android:text="17/05/2017"
+        android:text="11/10/2017"
         android:textColor="@android:color/background_dark" />
 
     <RelativeLayout
         android:id="@+id/relativeLayout4"
         android:layout_width="match_parent"
         android:layout_height="2dp"
-        android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
-
         android:layout_alignParentStart="true"
         android:background="@android:color/background_dark"
         android:textColor="@android:color/background_dark"></RelativeLayout>
@@ -112,18 +110,7 @@
         android:layout_toEndOf="@+id/drname"
         android:layout_toRightOf="@+id/drname" />
 
-    <TextView
-        android:id="@+id/Pdob"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/imageView2"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:text="Appoinment Booking and Prescription Viewer"
-        android:textAlignment="center"
-        android:textColor="@android:color/background_dark"
-        android:textSize="18dp"
-        android:textStyle="bold" />
+
 
     <RelativeLayout
         android:id="@+id/relativeLayout"
@@ -166,7 +153,7 @@
         android:layout_alignStart="@+id/populationlabel"
         android:layout_below="@+id/populationlabel1"
         android:layout_marginBottom="10dp"
-        android:text="Dr Name                      :  "
+        android:text="Dr Name                       :  "
         android:textColor="@android:color/background_dark" />
 
     <TextView
@@ -176,7 +163,7 @@
         android:layout_alignLeft="@+id/appointment_date"
         android:layout_alignStart="@+id/appointment_date"
         android:layout_alignTop="@+id/drname"
-        android:text="Dr Fisk"
+        android:text="Dr Patel"
         android:textColor="@android:color/background_dark" />
 
     <TextView
@@ -268,7 +255,7 @@
         android:id="@+id/textView12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="56dp"
+        android:layout_marginTop="28dp"
         android:text="Doctor Signature :"
         android:textColor="@android:color/background_dark"
         android:layout_below="@+id/medicine_Refill"
@@ -306,7 +293,7 @@
         android:layout_alignLeft="@+id/drname"
         android:layout_alignStart="@+id/drname"
         android:layout_below="@+id/doctor_Name"
-        android:text="Dr ID                             :"
+        android:text="Dr ID                              :"
         android:textColor="@android:color/background_dark" />
 
     <TextView
@@ -316,7 +303,7 @@
         android:layout_alignLeft="@+id/doctor_Name"
         android:layout_alignStart="@+id/doctor_Name"
         android:layout_below="@+id/doctor_Name"
-        android:text="DR1234"
+        android:text="012"
         android:textColor="@android:color/background_dark" />
 
     <Button
@@ -326,7 +313,7 @@
         android:layout_below="@+id/relativeLayout3"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="30dp"
-        android:text="Order Prescription" />
+        android:text="Provide Prescription Copy" />
 
 
 </RelativeLayout>

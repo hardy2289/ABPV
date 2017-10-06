@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="225dp"
+    android:background="@android:drawable/dialog_holo_dark_frame">
+
+    <TextView
+        android:id="@+id/ranklabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Appointment ID  :"
+        android:textColor="@android:color/background_light"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="22dp"
+        android:layout_marginStart="22dp"
+        android:layout_alignTop="@+id/AppId" />
+
+    <TextView
+        android:id="@+id/AppId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="3dp"
+        android:layout_marginLeft="5dp"
+        android:text="111"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/ranklabel"
+        android:textColor="@android:color/background_light" />
+
+    <TextView
+        android:id="@+id/countrylabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Appointment Date  :"
+        android:textColor="@android:color/background_light"
+        android:layout_marginTop="9dp"
+        android:layout_below="@+id/AppId"
+        android:layout_alignLeft="@+id/ranklabel"
+        android:layout_alignStart="@+id/ranklabel" />
+
+    <TextView
+        android:id="@+id/AppDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="04/10/2017"
+        android:textColor="@android:color/background_light"
+        android:layout_above="@+id/populationlabel"
+        android:layout_toRightOf="@+id/AppId"
+        android:layout_toEndOf="@+id/AppId" />
+
+    <TextView
+        android:id="@+id/populationlabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Appointment Time  :"
+        android:textColor="@android:color/background_light"
+        android:layout_marginTop="12dp"
+        android:layout_below="@+id/countrylabel"
+        android:layout_alignLeft="@+id/countrylabel"
+        android:layout_alignStart="@+id/countrylabel" />
+
+    <TextView
+        android:id="@+id/AppTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="14:10"
+        android:textColor="@android:color/background_light"
+        android:layout_alignBaseline="@+id/populationlabel"
+        android:layout_alignBottom="@+id/populationlabel"
+        android:layout_alignLeft="@+id/AppDate"
+        android:layout_alignStart="@+id/AppDate" />
+
+    <TextView
+        android:id="@+id/populationlabel2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Patient ID  :"
+        android:textColor="@android:color/background_light"
+        android:layout_marginTop="13dp"
+        android:layout_below="@+id/AppTime"
+        android:layout_alignLeft="@+id/populationlabel"
+        android:layout_alignStart="@+id/populationlabel" />
+
+    <TextView
+        android:id="@+id/PID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" 41"
+        android:textColor="@android:color/background_light"
+        android:layout_alignBaseline="@+id/populationlabel2"
+        android:layout_alignBottom="@+id/populationlabel2"
+        android:layout_toRightOf="@+id/populationlabel2"
+        android:layout_toEndOf="@+id/populationlabel2"
+        android:layout_marginLeft="6dp"
+        android:layout_marginStart="6dp" />
+
+    <TextView
+        android:id="@+id/populationlabel3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Last Name :"
+        android:textColor="@android:color/background_light"
+        android:layout_marginTop="13dp"
+        android:layout_below="@+id/PID"
+        android:layout_alignLeft="@+id/populationlabel"
+        android:layout_alignStart="@+id/populationlabel" />
+
+    <TextView
+        android:id="@+id/LNAME"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tailor"
+        android:textColor="@android:color/background_light"
+        android:layout_alignBaseline="@+id/populationlabel3"
+        android:layout_alignBottom="@+id/populationlabel3"
+        android:layout_toRightOf="@+id/populationlabel3"
+        android:layout_toEndOf="@+id/populationlabel3"
+        android:layout_marginLeft="6dp"
+        android:layout_marginStart="6dp" />
+
+
+    <Button
+        android:id="@+id/confirmappointment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Confirm Appointment"
+        android:textColor="@android:color/background_light"
+        android:layout_marginTop="8dp"
+        android:layout_below="@+id/populationlabel3"
+        android:layout_alignLeft="@+id/populationlabel3"
+        android:layout_alignStart="@+id/populationlabel3"
+        android:layout_marginLeft="64dp"
+        android:layout_marginStart="64dp" />
+
+
+</RelativeLayout>
+

@@ -1,11 +1,14 @@
 package com.example.ganesha.abpv.MainActivities.MainActivities.PatientFragment;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -14,6 +17,8 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.ganesha.abpv.MainActivities.MainActivities.Model.Appointments;
 import com.example.ganesha.abpv.MainActivities.MainActivities.Model.BookedAppointmentHolder;
@@ -24,6 +29,11 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
+
+import java.util.Collection;
+import java.util.Iterator;
+import java.util.List;
+import java.util.ListIterator;
 
 
 public class CancellingAppointmentF extends Fragment {
@@ -38,6 +48,127 @@ public class CancellingAppointmentF extends Fragment {
     private RecyclerView myRecyclerView;
     private LinearLayoutManager linearLayoutManager;
     private static View view;
+    private List<Appointments> Holder= new List<Appointments>() {
+        @Override
+        public int size() {
+            return 0;
+        }
+
+        @Override
+        public boolean isEmpty() {
+            return false;
+        }
+
+        @Override
+        public boolean contains(Object o) {
+            return false;
+        }
+
+        @NonNull
+        @Override
+        public Iterator<Appointments> iterator() {
+            return null;
+        }
+
+        @NonNull
+        @Override
+        public Object[] toArray() {
+            return new Object[0];
+        }
+
+        @NonNull
+        @Override
+        public <T> T[] toArray(@NonNull T[] a) {
+            return null;
+        }
+
+        @Override
+        public boolean add(Appointments appointments) {
+            return false;
+        }
+
+        @Override
+        public boolean remove(Object o) {
+            return false;
+        }
+
+        @Override
+        public boolean containsAll(@NonNull Collection<?> c) {
+            return false;
+        }
+
+        @Override
+        public boolean addAll(@NonNull Collection<? extends Appointments> c) {
+            return false;
+        }
+
+        @Override
+        public boolean addAll(int index, @NonNull Collection<? extends Appointments> c) {
+            return false;
+        }
+
+        @Override
+        public boolean removeAll(@NonNull Collection<?> c) {
+            return false;
+        }
+
+        @Override
+        public boolean retainAll(@NonNull Collection<?> c) {
+            return false;
+        }
+
+        @Override
+        public void clear() {
+
+        }
+
+        @Override
+        public Appointments get(int index) {
+            return null;
+        }
+
+        @Override
+        public Appointments set(int index, Appointments element) {
+            return null;
+        }
+
+        @Override
+        public void add(int index, Appointments element) {
+
+        }
+
+        @Override
+        public Appointments remove(int index) {
+            return null;
+        }
+
+        @Override
+        public int indexOf(Object o) {
+            return 0;
+        }
+
+        @Override
+        public int lastIndexOf(Object o) {
+            return 0;
+        }
+
+        @Override
+        public ListIterator<Appointments> listIterator() {
+            return null;
+        }
+
+        @NonNull
+        @Override
+        public ListIterator<Appointments> listIterator(int index) {
+            return null;
+        }
+
+        @NonNull
+        @Override
+        public List<Appointments> subList(int fromIndex, int toIndex) {
+            return null;
+        }
+    };
     private AdapterView.OnItemClickListener mItemClickListener;
     private OnFragmentInteractionListener mListener;
     public Button CancelApp;
@@ -99,11 +230,48 @@ public class CancellingAppointmentF extends Fragment {
         mAdapter = new FirebaseRecyclerAdapter<Appointments, BookedAppointmentHolder>(Appointments.class, R.layout.listview_booked_display, BookedAppointmentHolder.class, postsQuery) {
             @SuppressLint("SetTextI18n")
             @Override
-            protected void populateViewHolder(BookedAppointmentHolder viewHolder, Appointments model, int position) {
+            protected void populateViewHolder(BookedAppointmentHolder viewHolder, final Appointments model, final int position) {
 
                 viewHolder.bDoctorName.setText(model.DoctorName);
                 viewHolder.bAppointmentTime.setText(model.AppointmentTime);
                 viewHolder.bAppointmentDate.setText(model.AppointmentDate);
+                viewHolder.removeC.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+
+                        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+                        LayoutInflater inflater = (LayoutInflater) getActivity().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+                        View promptsView = inflater.inflate(R.layout.customenew, null);
+
+                        builder.setView(promptsView);
+
+                        final AlertDialog dialog = builder.create();
+
+                        final TextView aAppointmentDateb = (TextView) promptsView.findViewById(R.id.Appointment_Dateb);
+                        aAppointmentDateb.setText(model.AppointmentDate);
+                        final TextView aAppointmentTimeb = (TextView) promptsView.findViewById(R.id.Appointment_Timeb);
+                        aAppointmentTimeb.setText(model.AppointmentTime);
+                        final TextView aDoctorNamec = (TextView) promptsView.findViewById(R.id.Doctor_nameb);
+                        aDoctorNamec.setText(model.DoctorName);
+
+                        Button dialogButton = (Button) promptsView.findViewById(R.id.cancelappointment);
+                        // if button is clicked, close the custom dialog
+                        dialogButton.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                Holder.remove(position);
+                                mAdapter.getRef(position).removeValue();
+                                mAdapter.notifyItemRemoved(position);
+                                dialog.dismiss();
+
+                                Toast.makeText(getActivity(), "Appointment Cancelled Successfully", Toast.LENGTH_LONG).show();
+                            }
+
+                        });
+                        dialog.show();
+
+                    }
+                });
             }
         };
         mRecycler.setAdapter(mAdapter);

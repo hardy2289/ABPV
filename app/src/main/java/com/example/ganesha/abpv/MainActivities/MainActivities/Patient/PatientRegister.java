@@ -14,7 +14,6 @@ import android.widget.Toast;
 
 import com.example.ganesha.abpv.MainActivities.MainActivities.ConnectionDetector;
 import com.example.ganesha.abpv.MainActivities.MainActivities.Model.Appointments;
-import com.example.ganesha.abpv.MainActivities.MainActivities.Model.NewAppointments;
 import com.example.ganesha.abpv.MainActivities.MainActivities.Model.Users;
 import com.example.ganesha.abpv.MainActivities.MainActivities.Support;
 import com.example.ganesha.abpv.R;
@@ -157,7 +156,7 @@ public class PatientRegister extends AppCompatActivity {
 
         writeNewAppointment(userAppointmentDate,AppointmentId,userAppointmentTime, userDateofBirth, userDoctorName, userLastname,userPhoneno, DoctorId,PatientID, uid, user.getUid());
 
-        writeNewAppointments(userAppointmentDate,userAppointmentTime,DoctorId,userDoctorName, uid);
+       // writeNewAppointments(userAppointmentDate,userAppointmentTime,DoctorId,userDoctorName, uid);
 
       //  writeNewDocAppointments(userAppointmentDate,AppointmentId,userAppointmentTime, userLastname, PatientID, uid );
 
@@ -193,12 +192,12 @@ public class PatientRegister extends AppCompatActivity {
         mDatabase.child("appointment").child(userId).child("app1").setValue(appointments);
     }
 
-        public void writeNewAppointments(String AppointmentDateA, String AppointmentTimeA, String DoctorIDA, String DoctorNameA, String userId){
+     /*   public void writeNewAppointments(String AppointmentDateA, String AppointmentTimeA, String DoctorIDA, String DoctorNameA, String userId){
 
             NewAppointments newAppointments=new NewAppointments(AppointmentDateA, AppointmentTimeA,DoctorIDA,DoctorNameA);
 
         mDatabase.child("newappointment").child(userId).child("app1").setValue(newAppointments);
-    }
+    }*/
 
    /* public void writeNewDocAppointments (String AppointmentDateD, String AppointmentIDD, String AppointmentTimeD, String LastNameD, String PatientIDD,String userId){
 

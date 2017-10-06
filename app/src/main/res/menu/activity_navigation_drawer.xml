@@ -2,18 +2,15 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <group android:checkableBehavior="single">
-        <item
-            android:id="@+id/nav_profile"
-            android:icon="@drawable/profile"
-            android:title="Update Profile" />
-        <item
-            android:id="@+id/nav_rappointment"
-            android:icon="@drawable/appointment"
-            android:title="Request Appointment" />
+
         <item
             android:id="@+id/nav_bappointment"
             android:icon="@drawable/appointment"
             android:title="Book Appointment" />
+        <item
+            android:id="@+id/nav_rappointment"
+            android:icon="@drawable/appointment"
+            android:title="Request Appointment" />
         <item
             android:id="@+id/nav_cappointment"
             android:icon="@drawable/appointment"
@@ -21,7 +18,11 @@
         <item
             android:id="@+id/nav_oprescription"
             android:icon="@drawable/prescription"
-            android:title="Order Prescription" />
+            android:title="Order Repeat Prescription" />
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/profile"
+            android:title="Update Profile" />
         <item
             android:id="@+id/nav_nearestgp"
             android:icon="@drawable/near_gp_view"

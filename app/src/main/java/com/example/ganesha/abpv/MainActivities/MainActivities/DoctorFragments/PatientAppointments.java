@@ -1,8 +1,10 @@
 package com.example.ganesha.abpv.MainActivities.MainActivities.DoctorFragments;
 
 import android.annotation.SuppressLint;
+import android.app.ProgressDialog;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -64,6 +66,19 @@ public class PatientAppointments extends Fragment {
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
+        final ProgressDialog dialog = new ProgressDialog(getActivity());
+
+        dialog.setMessage("Appointments are Loading..");
+        dialog.show();
+        dialog.setProgress(300);
+
+        Handler handler = new Handler();
+        handler.postDelayed(new Runnable() {
+            public void run() {
+                dialog.dismiss();
+            }
+        }, 2000);
+
 
 
         mManager = new LinearLayoutManager(getActivity());

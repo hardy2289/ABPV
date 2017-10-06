@@ -18,6 +18,7 @@ public class Appointments {
     public String Uid;
 
 
+
     public Appointments( ) {
         // Default constructor required for calls to DataSnapshot.getValue(Users.class)
     }

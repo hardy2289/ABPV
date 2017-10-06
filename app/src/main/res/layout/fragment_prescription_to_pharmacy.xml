@@ -1,47 +1,68 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/common_plus_signin_btn_text_dark_focused">
-
+    tools:context="com.example.ganesha.abpv.MainActivities.MainActivities.DoctorFragments.PrescriptionConfirmation">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:paddingBottom="@dimen/activity_vertical_margin"
-        android:paddingLeft="@dimen/activity_horizontal_margin"
-        android:paddingRight="@dimen/activity_horizontal_margin"
-        android:paddingTop="@dimen/activity_vertical_margin">
-        <!-- TODO: Update blank fragment layout -->
+        android:paddingBottom="16dp"
+        android:paddingTop="16dp">
 
-        <com.trncic.library.DottedProgressBar
-            android:id="@+id/chat_dot_progress"
+        <RelativeLayout
+            android:id="@+id/relativeLayout"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_above="@+id/textView3"
+            android:layout_height="25dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:padding="30dp"
-            app:activeDot="@drawable/active_dot"
-            app:dotSize="29dp"
-            app:inactiveDot="@drawable/inactive_dot"
-            app:jumpingSpeed="670"
-            app:spacing="15dp" />
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="15dp"
+            android:background="@android:color/holo_green_light">
 
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
+            <LinearLayout
+                android:id="@+id/linearLayout1"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@android:color/background_dark"
+                android:orientation="horizontal"
+                android:layout_above="@+id/textView"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="Order Prescription"
+                android:textColor="@android:color/background_dark"
+                android:textSize="18dp"
+                android:textStyle="bold|italic" />
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@android:color/background_dark"
+                android:orientation="horizontal"
+                android:layout_below="@+id/textView"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+        </RelativeLayout>
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/pharmacy_prescription_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:layout_marginBottom="187dp"
-            android:text="This Functionality is Under Development ......."
-            android:textAlignment="center"
-            android:textSize="24sp" />
-
-
+            android:layout_below="@+id/relativeLayout"
+            android:background="@color/cardview_light_background"
+            android:clipToPadding="false"
+            android:padding="5dp"
+            android:scrollbars="vertical"
+            tools:listitem="@layout/listview_pharmacy_display" />
     </RelativeLayout>
 
 

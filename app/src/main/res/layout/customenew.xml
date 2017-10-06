@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="180dp"
+
+    android:background="@android:drawable/dialog_holo_dark_frame">
+
+
+
+    <TextView
+        android:id="@+id/countrylabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Doctor Name    :"
+        android:textColor="@android:color/background_light"
+        android:layout_marginTop="13dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="17dp"
+        android:layout_marginStart="17dp" />
+
+    <TextView
+        android:id="@+id/Doctor_nameb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dr Bakari"
+        android:textColor="@android:color/background_light"
+        android:layout_alignBaseline="@+id/countrylabel"
+        android:layout_alignBottom="@+id/countrylabel"
+        android:layout_toRightOf="@+id/countrylabel"
+        android:layout_toEndOf="@+id/countrylabel"
+        android:layout_marginLeft="14dp"
+        android:layout_marginStart="14dp" />
+
+    <TextView
+        android:id="@+id/populationlabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Appointment Date   :"
+        android:textColor="@android:color/background_light"
+        android:layout_below="@+id/populationlabel2"
+        android:layout_toLeftOf="@+id/Appointment_Dateb"
+        android:layout_toStartOf="@+id/Appointment_Dateb"
+        android:layout_marginTop="14dp" />
+
+    <TextView
+        android:id="@+id/Appointment_Dateb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:text="04/10/2017"
+        android:textColor="@android:color/background_light"
+        android:layout_alignBaseline="@+id/populationlabel"
+        android:layout_alignBottom="@+id/populationlabel"
+        android:layout_toRightOf="@+id/populationlabel2"
+        android:layout_toEndOf="@+id/populationlabel2"
+        android:layout_marginStart="12dp" />
+
+    <TextView
+        android:id="@+id/populationlabel2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Appointment Time   :"
+        android:textColor="@android:color/background_light"
+        android:layout_below="@+id/countrylabel"
+        android:layout_alignLeft="@+id/countrylabel"
+        android:layout_alignStart="@+id/countrylabel"
+        android:layout_marginTop="13dp" />
+
+    <TextView
+        android:id="@+id/Appointment_Timeb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="14:20"
+        android:textColor="@android:color/background_light"
+        android:layout_alignBaseline="@+id/populationlabel2"
+        android:layout_alignBottom="@+id/populationlabel2"
+        android:layout_alignLeft="@+id/Appointment_Dateb"
+        android:layout_alignStart="@+id/Appointment_Dateb" />
+
+
+    <Button
+        android:id="@+id/cancelappointment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cancel Appointment"
+        android:textColor="@android:color/background_light"
+        android:layout_marginTop="12dp"
+        android:layout_marginLeft="71dp"
+        android:layout_marginStart="71dp"
+        android:layout_below="@+id/populationlabel"
+        android:layout_alignLeft="@+id/populationlabel"
+        android:layout_alignStart="@+id/populationlabel" />
+
+
+</RelativeLayout>
+

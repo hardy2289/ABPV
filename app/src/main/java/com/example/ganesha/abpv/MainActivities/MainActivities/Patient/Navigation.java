@@ -182,19 +182,14 @@ public class Navigation extends AppCompatActivity
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         int id = item.getItemId();
-        if (id == R.id.nav_profile) {
-            AddDetailsF fragment = new AddDetailsF();
-            android.support.v4.app.FragmentTransaction fragmentTransaction =
-                    getSupportFragmentManager().beginTransaction();
-            fragmentTransaction.replace(R.id.fragment_container, fragment);
-            fragmentTransaction.commit();
-        } else if (id == R.id.nav_rappointment) {
+        if (id == R.id.nav_rappointment) {
             RequestAppointmentF fragment = new RequestAppointmentF();
             android.support.v4.app.FragmentTransaction fragmentTransaction =
                     getSupportFragmentManager().beginTransaction();
             fragmentTransaction.replace(R.id.fragment_container, fragment);
             fragmentTransaction.commit();
-        } else if (id == R.id.nav_bappointment) {
+        }
+        else if (id == R.id.nav_bappointment) {
             BookingAppointmentF fragment = new BookingAppointmentF();
             android.support.v4.app.FragmentTransaction fragmentTransaction =
                     getSupportFragmentManager().beginTransaction();
@@ -213,6 +208,12 @@ public class Navigation extends AppCompatActivity
             fragmentTransaction.replace(R.id.fragment_container, fragment);
             fragmentTransaction.commit();
 
+        } else  if (id == R.id.nav_profile) {
+            AddDetailsF fragment = new AddDetailsF();
+            android.support.v4.app.FragmentTransaction fragmentTransaction =
+                    getSupportFragmentManager().beginTransaction();
+            fragmentTransaction.replace(R.id.fragment_container, fragment);
+            fragmentTransaction.commit();
         }
         else if (id == R.id.nav_nearestgp) {
             FindNearestGP fragment = new FindNearestGP();

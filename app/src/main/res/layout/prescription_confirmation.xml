@@ -6,7 +6,7 @@
     android:layout_marginLeft="5dp"
     android:layout_marginRight="5dp"
     android:layout_marginTop="20dp"
-    android:background="#99257bd7">
+    android:background="@android:color/holo_orange_light">
 
     <TextView
         android:id="@+id/ranklabel"

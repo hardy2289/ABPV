@@ -1,92 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_marginBottom="10dp"
-    android:background="#99e5eef1">
-
-    <RelativeLayout
-        android:id="@+id/relativeLayout1"
-        android:layout_width="match_parent"
-        android:layout_height="25dp"
-        android:layout_marginTop="10dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginBottom="15dp"
-        android:background="@android:color/holo_green_light">
-        <LinearLayout
-            android:id="@+id/linearLayout2"
-            android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:background="@android:color/background_dark"
-            android:orientation="horizontal"
-            android:layout_above="@+id/textView"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
-
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
-            android:text="Order Repeat Prescription"
-            android:textColor="@android:color/background_dark"
-            android:textSize="18dp"
-            android:textStyle="bold|italic" />
-        <LinearLayout
-            android:id="@+id/linearLayout1"
-            android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:background="@android:color/background_dark"
-            android:orientation="horizontal"
-            android:layout_below="@+id/textView"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
-    </RelativeLayout>
-
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="match_parent"
-        android:layout_height="5dp"
-
-        android:background="@android:color/background_dark"
-        android:orientation="horizontal"
-        android:layout_below="@+id/relativeLayout1"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@android:color/holo_orange_light"
-        android:id="@+id/relativeLayout5"
-        android:layout_marginLeft="2dp"
-        android:layout_marginRight="2dp"
-        android:layout_below="@+id/linearLayout"
-        android:layout_alignLeft="@+id/relativeLayout1"
-        android:layout_alignStart="@+id/relativeLayout1">
+    android:layout_width="fill_parent"
+    android:layout_height="430dp"
+    android:layout_marginLeft="25dp"
+    android:layout_marginRight="25dp"
+    android:background="#99257bd7"
+    >
 
     <TextView
         android:id="@+id/ranklabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/countrylabel"
-        android:layout_alignRight="@+id/countrylabel"
-        android:layout_below="@+id/textView"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="8dp"
         android:text="Patient ID                     :"
-        android:textColor="@android:color/background_dark" />
+        android:textColor="@android:color/background_dark"
+        android:layout_below="@+id/relativeLayout"
+        android:layout_alignRight="@+id/countrylabel"
+        android:layout_alignEnd="@+id/countrylabel" />
 
     <TextView
-        android:id="@+id/patientIDPP"
+        android:id="@+id/patientID"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/patientNamePP"
-        android:layout_alignStart="@+id/patientNamePP"
+        android:layout_alignLeft="@+id/patientName"
+        android:layout_alignStart="@+id/patientName"
         android:layout_alignTop="@+id/ranklabel"
-        android:layout_below="@+id/textView"
         android:text="41"
         android:textColor="@android:color/background_dark" />
 
@@ -97,15 +35,15 @@
         android:layout_alignLeft="@+id/populationlabel"
         android:layout_alignStart="@+id/populationlabel"
         android:layout_below="@+id/ranklabel"
-        android:text="Patient Name              :"
+        android:text="Patient Last Name     :"
         android:textColor="@android:color/background_dark" />
 
     <TextView
-        android:id="@+id/patientNamePP"
+        android:id="@+id/patientName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/patient_dobPP"
-        android:layout_alignStart="@+id/patient_dobPP"
+        android:layout_alignLeft="@+id/patient_dob"
+        android:layout_alignStart="@+id/patient_dob"
         android:layout_alignTop="@+id/countrylabel"
         android:text="Tailor"
         android:textColor="@android:color/background_dark" />
@@ -114,18 +52,19 @@
         android:id="@+id/populationlabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Patient Date of Birth  :"
-        android:textColor="@android:color/background_dark"
+        android:layout_alignEnd="@+id/populationlabel1"
+        android:layout_alignRight="@+id/populationlabel1"
         android:layout_below="@+id/countrylabel"
-        android:layout_alignLeft="@+id/populationlabel1"
-        android:layout_alignStart="@+id/populationlabel1" />
+        android:layout_marginLeft="5dp"
+        android:text="Patient Date of Birth  :"
+        android:textColor="@android:color/background_dark" />
 
     <TextView
-        android:id="@+id/patient_dobPP"
+        android:id="@+id/patient_dob"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/appointment_datePP"
-        android:layout_alignStart="@+id/appointment_datePP"
+        android:layout_alignLeft="@+id/appointment_date"
+        android:layout_alignStart="@+id/appointment_date"
         android:layout_alignTop="@+id/populationlabel"
         android:text="26/11/1991"
         android:textColor="@android:color/background_dark" />
@@ -134,16 +73,15 @@
         android:id="@+id/populationlabel1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="18dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/appointment_date"
+        android:layout_marginLeft="5dp"
         android:text="Appointment Date      :"
-        android:textColor="@android:color/background_dark"
-        android:layout_marginStart="18dp"
-        android:layout_below="@+id/populationlabel"
-        android:layout_toRightOf="@+id/imageView2"
-        android:layout_toEndOf="@+id/imageView2" />
+        android:textColor="@android:color/background_dark" />
 
     <TextView
-        android:id="@+id/appointment_datePP"
+        android:id="@+id/appointment_date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/populationlabel"
@@ -157,7 +95,6 @@
         android:id="@+id/relativeLayout4"
         android:layout_width="match_parent"
         android:layout_height="2dp"
-        android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:background="@android:color/background_dark"
@@ -171,6 +108,7 @@
         android:layout_marginTop="10dp"
         android:layout_toEndOf="@+id/drname"
         android:layout_toRightOf="@+id/drname" />
+
 
 
     <RelativeLayout
@@ -190,9 +128,9 @@
         android:layout_height="2dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/drnamePP"
+        android:layout_below="@+id/drname"
         android:layout_marginTop="20dp"
-        android:background="@android:color/background_dark">
+        android:background="@android:color/holo_blue_light">
 
     </RelativeLayout>
 
@@ -207,7 +145,7 @@
         android:background="@drawable/r_x" />
 
     <TextView
-        android:id="@+id/drnamePP"
+        android:id="@+id/drname"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/populationlabel"
@@ -218,12 +156,12 @@
         android:textColor="@android:color/background_dark" />
 
     <TextView
-        android:id="@+id/doctor_NamePP"
+        android:id="@+id/doctor_Name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/appointment_datePP"
-        android:layout_alignStart="@+id/appointment_datePP"
-        android:layout_alignTop="@+id/drnamePP"
+        android:layout_alignLeft="@+id/appointment_date"
+        android:layout_alignStart="@+id/appointment_date"
+        android:layout_alignTop="@+id/drname"
         android:text="Dr Patel"
         android:textColor="@android:color/background_dark" />
 
@@ -231,19 +169,19 @@
         android:id="@+id/medicine"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="11dp"
-        android:text="Medication                  :"
-        android:textColor="@android:color/background_dark"
+        android:layout_alignLeft="@+id/imageView"
+        android:layout_alignStart="@+id/imageView"
         android:layout_below="@+id/imageView"
-        android:layout_alignRight="@+id/amount"
-        android:layout_alignEnd="@+id/amount" />
+        android:layout_marginTop="10dp"
+        android:text="Medication                  :"
+        android:textColor="@android:color/background_dark" />
 
     <TextView
         android:id="@+id/medicine_Name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/doctor_NamePP"
-        android:layout_alignStart="@+id/doctor_NamePP"
+        android:layout_alignLeft="@+id/doctor_Name"
+        android:layout_alignStart="@+id/doctor_Name"
         android:layout_alignTop="@+id/medicine"
         android:text="Amoxocilling"
         android:textColor="@android:color/background_dark" />
@@ -252,12 +190,12 @@
         android:id="@+id/amount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/medicine"
 
+        android:layout_alignStart="@+id/medicine"
+        android:layout_alignTop="@+id/medicineAmount"
         android:text="Amount                        :"
-        android:textColor="@android:color/background_dark"
-        android:layout_below="@+id/medicine"
-        android:layout_alignRight="@+id/countrylabel"
-        android:layout_alignEnd="@+id/countrylabel" />
+        android:textColor="@android:color/background_dark" />
 
     <TextView
         android:id="@+id/medicineAmount"
@@ -274,11 +212,11 @@
         android:id="@+id/Docotorid"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="How Much (Disp)        :"
-        android:textColor="@android:color/background_dark"
+        android:layout_alignLeft="@+id/amount"
+        android:layout_alignStart="@+id/amount"
         android:layout_below="@+id/amount"
-        android:layout_alignLeft="@+id/textView10"
-        android:layout_alignStart="@+id/textView10" />
+        android:text="How Much (Disp)       :"
+        android:textColor="@android:color/background_dark" />
 
     <TextView
         android:id="@+id/medicine_Despense"
@@ -294,12 +232,12 @@
         android:id="@+id/textView10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/drnamePP"
-        android:layout_alignLeft="@+id/drnamePP"
-        android:layout_alignRight="@+id/drnamePP"
-        android:layout_alignStart="@+id/drnamePP"
+        android:layout_alignEnd="@+id/drname"
+        android:layout_alignLeft="@+id/drname"
+        android:layout_alignRight="@+id/drname"
+        android:layout_alignStart="@+id/drname"
         android:layout_below="@+id/Docotorid"
-        android:text="Refill                              :"
+        android:text="Refill                             :"
         android:textColor="@android:color/background_dark" />
 
     <TextView
@@ -316,7 +254,7 @@
         android:id="@+id/textView12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="52dp"
+        android:layout_marginTop="28dp"
         android:text="Doctor Signature :"
         android:textColor="@android:color/background_dark"
         android:layout_below="@+id/medicine_Refill"
@@ -338,11 +276,11 @@
         android:id="@+id/relativeLayout3"
         android:layout_width="120dp"
         android:layout_height="40dp"
-
-        android:background="#ffbdd6fc"
-        android:layout_below="@+id/textView12"
         android:layout_alignLeft="@+id/textView12"
-        android:layout_alignStart="@+id/textView12">
+
+        android:layout_alignStart="@+id/textView12"
+        android:layout_below="@+id/textView12"
+        android:background="#ffbdd6fc">
 
 
     </RelativeLayout>
@@ -351,41 +289,30 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/drnamePP"
-        android:layout_alignStart="@+id/drnamePP"
-        android:layout_below="@+id/doctor_NamePP"
+        android:layout_alignLeft="@+id/drname"
+        android:layout_alignStart="@+id/drname"
+        android:layout_below="@+id/doctor_Name"
         android:text="Dr ID                              :"
         android:textColor="@android:color/background_dark" />
 
     <TextView
-        android:id="@+id/doctoridPP"
+        android:id="@+id/doctorid"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/doctor_NamePP"
-        android:layout_alignStart="@+id/doctor_NamePP"
-        android:layout_below="@+id/doctor_NamePP"
+        android:layout_alignLeft="@+id/doctor_Name"
+        android:layout_alignStart="@+id/doctor_Name"
+        android:layout_below="@+id/doctor_Name"
         android:text="012"
         android:textColor="@android:color/background_dark" />
 
     <Button
-        android:id="@+id/repeatprescriptionorder"
+        android:id="@+id/prescriptionorder"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Order Repeat Prescription"
-        android:layout_marginBottom="49dp"
-        android:layout_above="@+id/relativeLayout4"
-        android:layout_centerHorizontal="true" />
+        android:layout_below="@+id/relativeLayout3"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:text="Order Prescription" />
 
-        </RelativeLayout>
 
 </RelativeLayout>
-
-
-
-
-
-
-
-
-
-

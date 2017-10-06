@@ -12,44 +12,42 @@
             android:id="@+id/ranklabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
+            android:layout_alignLeft="@+id/populationlabel"
             android:layout_alignParentTop="true"
-            android:text="  Appointment ID             : "
+            android:layout_alignStart="@+id/populationlabel"
+            android:text="  Pharmacy Name   :  "
             android:textColor="@android:color/background_dark"
             android:textSize="@dimen/font_size" />
 
         <TextView
-            android:id="@+id/AppointmentIDD"
+            android:id="@+id/PharName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="111"
-            android:textColor="@android:color/holo_red_dark"
-            android:textSize="@dimen/font_size"
-            android:layout_alignParentTop="true"
-            android:layout_toRightOf="@+id/populationlabel1"
-            android:layout_toEndOf="@+id/populationlabel1" />
+            android:layout_alignLeft="@+id/Address"
+            android:layout_alignStart="@+id/Address"
+            android:text="Jade Pharmacy"
+            android:textColor="@android:color/background_dark"
+            android:textSize="@dimen/font_size" />
 
         <TextView
             android:id="@+id/countrylabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/ranklabel"
-            android:layout_alignStart="@+id/ranklabel"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
             android:layout_below="@+id/ranklabel"
-            android:text="  Appointment Date        :  "
+            android:text="  Address                  : "
             android:textColor="@android:color/background_dark"
             android:textSize="@dimen/font_size" />
 
         <TextView
-            android:id="@+id/AppointmentDateD"
+            android:id="@+id/Address"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignBaseline="@+id/countrylabel"
-            android:layout_alignBottom="@+id/countrylabel"
-            android:layout_toEndOf="@+id/countrylabel"
-            android:layout_toRightOf="@+id/countrylabel"
-            android:text="04/10/2017"
+            android:layout_alignLeft="@+id/Postcode"
+            android:layout_alignStart="@+id/Postcode"
+            android:layout_below="@+id/PharName"
+            android:text=" 22 Hibernia Road"
             android:textColor="@android:color/background_dark"
             android:textSize="@dimen/font_size" />
 
@@ -60,19 +58,18 @@
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             android:layout_below="@+id/countrylabel"
-            android:text="  Appointment Time        : "
+            android:text="  Postcode                : "
             android:textColor="@android:color/background_dark"
             android:textSize="@dimen/font_size" />
 
         <TextView
-            android:id="@+id/AppointmentTimeD"
+            android:id="@+id/Postcode"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignBaseline="@+id/populationlabel"
-            android:layout_alignBottom="@+id/populationlabel"
-            android:layout_toEndOf="@+id/populationlabel"
-            android:layout_toRightOf="@+id/populationlabel"
-            android:text="14:10"
+            android:layout_alignLeft="@+id/PhoneNo"
+            android:layout_alignStart="@+id/PhoneNo"
+            android:layout_below="@+id/Address"
+            android:text="TW3 4ER"
             android:textColor="@android:color/background_dark"
             android:textSize="@dimen/font_size" />
 
@@ -80,45 +77,47 @@
             android:id="@+id/populationlabel1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
             android:layout_below="@+id/populationlabel"
-            android:layout_toLeftOf="@+id/Appointment_Date"
-            android:text="  Patient ID                       :  "
+            android:layout_toLeftOf="@+id/Postcode"
+            android:text="  Phone No               :  "
             android:textColor="@android:color/background_dark"
             android:textSize="@dimen/font_size" />
 
         <TextView
-            android:id="@+id/PatientIDD"
+            android:id="@+id/PhoneNo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignTop="@+id/populationlabel1"
-            android:layout_toEndOf="@+id/populationlabel1"
-            android:layout_toRightOf="@+id/populationlabel1"
-            android:text="41"
+            android:layout_below="@+id/Postcode"
+            android:layout_toEndOf="@+id/populationlabel2"
+            android:layout_toRightOf="@+id/populationlabel2"
+            android:text="02014526396"
             android:textColor="@android:color/background_dark"
             android:textSize="@dimen/font_size" />
 
         <TextView
-            android:id="@+id/populationlabel12"
+            android:id="@+id/populationlabel2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/populationlabel1"
-            android:layout_toLeftOf="@+id/Appointment_Date"
-            android:text="  Last Name                     :  "
+            android:text="  Email Address       :  "
             android:textColor="@android:color/background_dark"
             android:textSize="@dimen/font_size" />
 
         <TextView
-            android:id="@+id/LastNameD"
+            android:id="@+id/EmailAdd"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/PatientIDD"
-            android:layout_toRightOf="@+id/populationlabel12"
-            android:text="Tailor"
+            android:layout_alignTop="@+id/populationlabel2"
+            android:layout_toEndOf="@+id/populationlabel2"
+            android:layout_toRightOf="@+id/populationlabel2"
+            android:text="jade@gmail.com"
             android:textColor="@android:color/background_dark"
             android:textSize="@dimen/font_size" />
 
         <ImageView
-            android:id="@+id/imageView15"
+            android:id="@+id/imageView145"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_alignParentEnd="true"

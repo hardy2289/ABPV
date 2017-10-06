@@ -2,6 +2,7 @@ package com.example.ganesha.abpv.MainActivities.MainActivities.Model;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.ganesha.abpv.R;
@@ -17,6 +18,8 @@ public class DoctorAppConfirmListHolder extends RecyclerView.ViewHolder{
     public TextView dLastName;
     public TextView dPatientID;
 
+    public ImageView confirmApp;
+
 
 
     public DoctorAppConfirmListHolder(View itemView) {
@@ -27,6 +30,7 @@ public class DoctorAppConfirmListHolder extends RecyclerView.ViewHolder{
         dAppointmentTime=(TextView) itemView.findViewById(R.id.AppointmentTimeD);
         dLastName=(TextView) itemView.findViewById(R.id.LastNameD);
         dPatientID=(TextView) itemView.findViewById(R.id.PatientIDD);
+        confirmApp=(ImageView) itemView.findViewById(R.id.imageView15);
 
     }
 }
