@@ -65,12 +65,12 @@ public class PrescriptionF extends Fragment {
 
 
           mDatabase = FirebaseDatabase.getInstance().getReference();
-           PID= mDatabase.child("appointment").child(userId).child("app1").child("zPatientID");
-            PLN= mDatabase.child("appointment").child(userId).child("app1").child("LastName");
-            PDOB= mDatabase.child("appointment").child(userId).child("app1").child("DOB");
-            AD= mDatabase.child("appointment").child(userId).child("app1").child("AppointmentDate");
-            DN = mDatabase.child("appointment").child(userId).child("app1").child("DoctorName");
-          DI = mDatabase.child("appointment").child(userId).child("app2").child("zDoctorID");
+           PID= mDatabase.child("appointment").child(userId).child("1").child("zPatientID");
+            PLN= mDatabase.child("appointment").child(userId).child("1").child("LastName");
+            PDOB= mDatabase.child("appointment").child(userId).child("1").child("DOB");
+            AD= mDatabase.child("appointment").child(userId).child("1").child("AppointmentDate");
+            DN = mDatabase.child("appointment").child(userId).child("1").child("DoctorName");
+          DI = mDatabase.child("appointment").child(userId).child("1").child("zDoctorID");
 
 
             PatientIDP = (TextView) view.findViewById(R.id.patientIDPP);

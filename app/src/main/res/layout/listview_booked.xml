@@ -74,15 +74,7 @@
             android:textColor="@android:color/background_dark"
             android:textSize="@dimen/font_size" />
 
-        <ImageView
-            android:id="@+id/imageView13"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignTop="@+id/Doctor_id"
-            android:layout_marginRight="10dp"
-            android:background="@drawable/arrow_right" />
+
 
     </RelativeLayout>
 

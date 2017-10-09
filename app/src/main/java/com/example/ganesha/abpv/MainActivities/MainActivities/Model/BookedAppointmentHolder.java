@@ -26,6 +26,6 @@ public class BookedAppointmentHolder extends RecyclerView.ViewHolder{
         bAppointmentTime = (TextView) itemView.findViewById(R.id.Appointment_Time_Booked);
         bDoctorName = (TextView) itemView.findViewById(R.id.Doctor_name_Booked);
 
-        removeC=(ImageView) itemView.findViewById(R.id.imageView13);
+       // removeC=(ImageView) itemView.findViewById(R.id.imageView13);
     }
 }

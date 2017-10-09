@@ -38,7 +38,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:layout_centerVertical="true"
-                android:text="Cancel Appointment"
+                android:text="Appointment History"
                 android:textColor="@android:color/background_dark"
                 android:textSize="18dp"
                 android:textStyle="bold|italic" />

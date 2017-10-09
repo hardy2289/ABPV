@@ -20,8 +20,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.ganesha.abpv.MainActivities.MainActivities.Model.AppointmentHistoryHolder;
 import com.example.ganesha.abpv.MainActivities.MainActivities.Model.Appointments;
-import com.example.ganesha.abpv.MainActivities.MainActivities.Model.BookedAppointmentHolder;
 import com.example.ganesha.abpv.MainActivities.MainActivities.Patient.FragmentSupport;
 import com.example.ganesha.abpv.R;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
@@ -41,7 +41,7 @@ public class CancellingAppointmentF extends Fragment {
     FragmentSupport fragmentSupport = new FragmentSupport();
     final String userId = fragmentSupport.getUid();
     private DatabaseReference mDatabase;
-    private FirebaseRecyclerAdapter<Appointments, BookedAppointmentHolder> mAdapter;
+    private FirebaseRecyclerAdapter<Appointments, AppointmentHistoryHolder> mAdapter;
     private RecyclerView mRecycler;
     private LinearLayoutManager mManager;
     public ImageView RemoveList;
@@ -227,14 +227,15 @@ public class CancellingAppointmentF extends Fragment {
         // Set up FirebaseRecyclerAdapter with the Query
         Query postsQuery = getQuery(mDatabase);
         // Query postsQuery = getQuery(mDatabase).orderByChild("shoppingStatus").equalTo("In Process");
-        mAdapter = new FirebaseRecyclerAdapter<Appointments, BookedAppointmentHolder>(Appointments.class, R.layout.listview_booked_display, BookedAppointmentHolder.class, postsQuery) {
+        mAdapter = new FirebaseRecyclerAdapter<Appointments, AppointmentHistoryHolder>(Appointments.class, R.layout.listview_history_display, AppointmentHistoryHolder.class, postsQuery) {
             @SuppressLint("SetTextI18n")
             @Override
-            protected void populateViewHolder(BookedAppointmentHolder viewHolder, final Appointments model, final int position) {
+            protected void populateViewHolder(AppointmentHistoryHolder viewHolder, final Appointments model, final int position) {
 
-                viewHolder.bDoctorName.setText(model.DoctorName);
-                viewHolder.bAppointmentTime.setText(model.AppointmentTime);
-                viewHolder.bAppointmentDate.setText(model.AppointmentDate);
+                viewHolder.hDoctorName.setText(model.DoctorName);
+                viewHolder.hAppointmentTime.setText(model.AppointmentTime);
+                viewHolder.hAppointmentDate.setText(model.AppointmentDate);
+                //viewHolder.hStatus.setText(model.AStatus);
                 viewHolder.removeC.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
@@ -253,6 +254,8 @@ public class CancellingAppointmentF extends Fragment {
                         aAppointmentTimeb.setText(model.AppointmentTime);
                         final TextView aDoctorNamec = (TextView) promptsView.findViewById(R.id.Doctor_nameb);
                         aDoctorNamec.setText(model.DoctorName);
+                       // final TextView aStatus = (TextView) promptsView.findViewById(R.id.Appointment_Statushh);
+                       // aStatus.setText(model.AStatus);
 
                         Button dialogButton = (Button) promptsView.findViewById(R.id.cancelappointment);
                         // if button is clicked, close the custom dialog

@@ -24,7 +24,7 @@ public class Appointments {
     }
 
     public Appointments(String AStatus, String AppointmentDate, String AppointmentID, String AppointmentTime, String DOB, String DoctorName, String LastName, String PhoneNo,
-                        String zDoctorID, String zPatientID) {
+                        String zDoctorID, String zPatientID, String UId) {
 
         this.AStatus=AStatus;
         this.AppointmentDate=AppointmentDate;
@@ -36,7 +36,7 @@ public class Appointments {
         this.PhoneNo = PhoneNo;
         this.zDoctorID=zDoctorID;
         this.zPatientID=zPatientID;
-        this.Uid=Uid;
+        this.Uid=UId;
 
     }
 }

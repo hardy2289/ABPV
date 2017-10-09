@@ -149,12 +149,13 @@ public class PatientRegister extends AppCompatActivity {
         String PatientID="";
         String DoctorId= "";
         String AppointmentId= "";
+        String Status=" ";
         String uid = mAuth.getCurrentUser().getUid();
 
         writeNewUser(FirebaseInstanceId.getInstance().getToken(), userDateofBirth, user.getEmail(),  userFirstname,  userGender, userLastname,
                 userPhoneno, uid,  username, user.getUid());
 
-        writeNewAppointment(userAppointmentDate,AppointmentId,userAppointmentTime, userDateofBirth, userDoctorName, userLastname,userPhoneno, DoctorId,PatientID, uid, user.getUid());
+        writeNewAppointment(Status,userAppointmentDate,AppointmentId,userAppointmentTime, userDateofBirth, userDoctorName, userLastname,userPhoneno, DoctorId,PatientID, uid, user.getUid());
 
        // writeNewAppointments(userAppointmentDate,userAppointmentTime,DoctorId,userDoctorName, uid);
 
@@ -183,13 +184,13 @@ public class PatientRegister extends AppCompatActivity {
         mDatabase.child("users").child(userId).setValue(user);
     }
 
-    public void writeNewAppointment(String AppointmentDate,String AppointmentID, String AppointmentTime, String DOB, String DoctorName,
+    public void writeNewAppointment(String Status,String AppointmentDate,String AppointmentID, String AppointmentTime, String DOB, String DoctorName,
                                     String LastName, String PhoneNo, String zDocotrID, String zPatientID, String Uid, String userId ) {
 
-        Appointments appointments = new Appointments(AppointmentDate, AppointmentID, AppointmentTime, DOB, DoctorName, LastName, PhoneNo,
+        Appointments appointments = new Appointments(Status, AppointmentDate, AppointmentID, AppointmentTime, DOB, DoctorName, LastName, PhoneNo,
                 zDocotrID, zPatientID, Uid);
 
-        mDatabase.child("appointment").child(userId).child("app1").setValue(appointments);
+        mDatabase.child("appointment").child(userId).child("1").setValue(appointments);
     }
 
      /*   public void writeNewAppointments(String AppointmentDateA, String AppointmentTimeA, String DoctorIDA, String DoctorNameA, String userId){

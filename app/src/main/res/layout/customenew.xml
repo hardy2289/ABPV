@@ -80,15 +80,16 @@
         android:layout_alignStart="@+id/Appointment_Dateb" />
 
 
+
     <Button
         android:id="@+id/cancelappointment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Cancel Appointment"
         android:textColor="@android:color/background_light"
-        android:layout_marginTop="12dp"
-        android:layout_marginLeft="71dp"
-        android:layout_marginStart="71dp"
+        android:layout_marginLeft="80dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="11dp"
         android:layout_below="@+id/populationlabel"
         android:layout_alignLeft="@+id/populationlabel"
         android:layout_alignStart="@+id/populationlabel" />
