@@ -94,13 +94,12 @@ public class PatientLogin extends AppCompatActivity implements GoogleApiClient.O
             @Override
             public void onClick(View v){
                 ConnectionDetector cd;
-
-              /*  cd = new ConnectionDetector(getApplicationContext());
+                cd = new ConnectionDetector(getApplicationContext());
                 // get Internet /
                 isInternetPresent = cd.isConnectingToInternet();
                 // check for Internet status
 
-                if (isInternetPresent) {*/
+                if (isInternetPresent) {
 
                     // Internet connection is not present
                     // Ask user to connect to Internet
@@ -140,11 +139,11 @@ public class PatientLogin extends AppCompatActivity implements GoogleApiClient.O
                                 });
                     }
 
-                    /* }else
+                     }else
                 {
                     Toast.makeText(PatientLogin.this, "No Internet Connection,Please check your internet connection.", Toast.LENGTH_SHORT).show();
 
-                }*/
+                }
 
 
 

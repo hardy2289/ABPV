@@ -64,13 +64,12 @@ public class PatientRegister extends AppCompatActivity {
             public void onClick(View v) {
                ConnectionDetector cd;
 
-               /* cd = new ConnectionDetector(getApplicationContext());
+                cd = new ConnectionDetector(getApplicationContext());
                 // get Internet status
                 isInternetPresent = cd.isConnectingToInternet();
                 // check for Internet status
 
                 if (isInternetPresent) {
-*/
                 String email = txtEmail.getText().toString().trim();
                 String password = txtPassword.getText().toString().trim();
                 String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
@@ -103,11 +102,11 @@ public class PatientRegister extends AppCompatActivity {
                             });
                 }
 
-          /* }else
+           }else
             {
                 Toast.makeText(PatientRegister.this, "No Internet Connection,Please check your internet connection.", Toast.LENGTH_SHORT).show();
 
-            }*/
+            }
 
             }
         });

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/countrylabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="  Doctor Name               :  "
+            android:textColor="@android:color/background_dark"
+            android:textSize="@dimen/font_size"
+            android:layout_below="@+id/ranklabel"
+            android:layout_alignLeft="@+id/ranklabel"
+            android:layout_alignStart="@+id/ranklabel" />
+
+        <TextView
+            android:id="@+id/Doctor_nameH"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DR Bakari"
+            android:textColor="@android:color/background_dark"
+            android:textSize="@dimen/font_size"
+            android:layout_toRightOf="@+id/countrylabel"
+            android:layout_toEndOf="@+id/countrylabel"
+            android:layout_alignParentTop="true" />
+
+        <TextView
+            android:id="@+id/populationlabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="  Appointment Date      :  "
+            android:textColor="@android:color/background_dark"
+            android:textSize="@dimen/font_size"
+            android:layout_below="@+id/countrylabel"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:id="@+id/Appointment_DateH"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="28 September 2017"
+            android:textColor="@android:color/background_dark"
+            android:textSize="@dimen/font_size"
+            android:layout_alignBaseline="@+id/populationlabel"
+            android:layout_alignBottom="@+id/populationlabel"
+            android:layout_toRightOf="@+id/populationlabel"
+            android:layout_toEndOf="@+id/populationlabel" />
+
+        <TextView
+            android:id="@+id/populationlabel1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/populationlabel"
+            android:layout_toLeftOf="@+id/Appointment_Date"
+            android:text="  Appointment Time      :  "
+            android:textColor="@android:color/background_dark"
+            android:textSize="@dimen/font_size" />
+
+        <TextView
+            android:id="@+id/Appointment_TimeH"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/populationlabel1"
+            android:layout_toEndOf="@+id/populationlabel1"
+            android:layout_toRightOf="@+id/populationlabel1"
+            android:text="04:10"
+            android:textColor="@android:color/background_dark"
+            android:textSize="@dimen/font_size" />
+
+
+
+        <ImageView
+            android:id="@+id/imageView14"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/Doctor_id"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/arrow_right" />
+
+    </RelativeLayout>
+
+</LinearLayout>

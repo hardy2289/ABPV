@@ -426,7 +426,7 @@ public class RequestAppointmentF extends Fragment implements AdapterView.OnItemS
 
         Map<String, Object> childUpdates = new HashMap<>();
 
-        childUpdates.put("/appointment/" + userId + "/app1/" +"/" , myDetailsValues);
+        childUpdates.put("/appointment/" + userId + "/1/" +"/" , myDetailsValues);
 
         mDatabase.updateChildren(childUpdates);
     }

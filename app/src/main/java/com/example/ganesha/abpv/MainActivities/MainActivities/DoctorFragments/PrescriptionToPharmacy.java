@@ -282,7 +282,9 @@ public class PrescriptionToPharmacy extends Fragment {
     public void onDestroy() {
         super.onDestroy();
         if (mAdapter != null) {
+
             mAdapter.cleanup();
+
         }
     }
 

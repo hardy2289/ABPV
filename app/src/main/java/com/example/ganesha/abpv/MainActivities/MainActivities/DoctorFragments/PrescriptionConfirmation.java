@@ -272,13 +272,22 @@ public class PrescriptionConfirmation extends Fragment {
                         });
                         dialog.show();
 
+
+
+
+
                     }
                 });
 
 
 
             }
+
+
+
+
         };
+
         mRecycler.setAdapter(mAdapter);
 
     }

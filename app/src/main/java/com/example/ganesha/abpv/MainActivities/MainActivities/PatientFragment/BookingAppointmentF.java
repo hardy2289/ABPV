@@ -318,7 +318,7 @@ public class BookingAppointmentF extends Fragment {
     }
 
     public Query getQuery(DatabaseReference databaseReference) {
-        Query doctorapp = databaseReference.child("users").child("znewapp").child("app1/");
+        Query doctorapp = databaseReference.child("newappointment/");
         return doctorapp;
     }
 
