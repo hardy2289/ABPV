@@ -13,13 +13,14 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import com.example.ganesha.abpv.MainActivities.MainActivities.DoctorFragments.*;
-import com.example.ganesha.abpv.MainActivities.MainActivities.DoctorFragments.PrescriptionConfirmation;
 import com.example.ganesha.abpv.R;
 import com.google.firebase.analytics.FirebaseAnalytics;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+
+import com.example.ganesha.abpv.MainActivities.MainActivities.DoctorFragments.*;
+import com.example.ganesha.abpv.MainActivities.MainActivities.DoctorFragments.AppointmentConfirmation;
 
 /**
  * Created by Ganesha on 01/09/2017.
@@ -148,15 +149,15 @@ public class NavigationDoctor extends AppCompatActivity
             fragmentTransaction.replace(R.id.fragment_container, fragment);
             fragmentTransaction.commit();
         } else if (id == R.id.nav_confirmappointment) {
-            com.example.ganesha.abpv.MainActivities.MainActivities.DoctorFragments.AppointmentConfirmation
-             fragment = new com.example.ganesha.abpv.MainActivities.MainActivities.DoctorFragments.AppointmentConfirmation();
+            AppointmentConfirmation
+             fragment = new AppointmentConfirmation();
             android.support.v4.app.FragmentTransaction fragmentTransaction =
                     getSupportFragmentManager().beginTransaction();
             fragmentTransaction.replace(R.id.fragment_container, fragment);
             fragmentTransaction.commit();
         } else if (id == R.id.nav_confirmprescription) {
             com.example.ganesha.abpv.MainActivities.MainActivities.DoctorFragments.PrescriptionConfirmation
-                    fragment = new PrescriptionConfirmation();
+                    fragment = new com.example.ganesha.abpv.MainActivities.MainActivities.DoctorFragments.PrescriptionConfirmation();
             android.support.v4.app.FragmentTransaction fragmentTransaction =
                     getSupportFragmentManager().beginTransaction();
             fragmentTransaction.replace(R.id.fragment_container, fragment);

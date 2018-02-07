@@ -7,14 +7,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.example.ganesha.abpv.R;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.HashMap;
 import java.util.Map;
-
-import static com.example.ganesha.abpv.R.id.appointment;
 
 public class Appointment_Confirmation_View extends Activity {
 	// Declare Variables
@@ -33,7 +30,7 @@ public class Appointment_Confirmation_View extends Activity {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.confirm_single_item_view);
+		setContentView(com.example.ganesha.abpv.R.layout.confirm_single_item_view);
 		// Retrieve data from booking appointment on item click event
 		Intent i = getIntent();
         mDatabase = FirebaseDatabase.getInstance().getReference();
@@ -45,13 +42,13 @@ public class Appointment_Confirmation_View extends Activity {
 
         // Locate the TextViews in singleitemview.xml
 
-        PatientAppointmentdate = (TextView) findViewById(R.id.Appointment);
-        DoctorName = (TextView) findViewById(R.id.Doctor_name);
-        DoctorID = (TextView)findViewById(R.id.Doctor_id);
-        PatientId = (TextView)findViewById(R.id.Appointment_no);
+        PatientAppointmentdate = (TextView) findViewById(com.example.ganesha.abpv.R.id.Appointment);
+        DoctorName = (TextView) findViewById(com.example.ganesha.abpv.R.id.Doctor_name);
+        DoctorID = (TextView)findViewById(com.example.ganesha.abpv.R.id.Doctor_id);
+        PatientId = (TextView)findViewById(com.example.ganesha.abpv.R.id.Appointment_no);
 
 
-        ConfirmAppointment = (Button)findViewById(appointment);
+        ConfirmAppointment = (Button)findViewById(com.example.ganesha.abpv.R.id.appointment);
 
 		// Load the results into the TextViews
 

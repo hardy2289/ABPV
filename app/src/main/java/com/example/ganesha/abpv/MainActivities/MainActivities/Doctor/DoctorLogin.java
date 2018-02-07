@@ -13,7 +13,7 @@ import android.widget.Toast;
 
 import com.example.ganesha.abpv.MainActivities.MainActivities.ConnectionDetector;
 import com.example.ganesha.abpv.MainActivities.MainActivities.Patient.GoogleLogin;
-import com.example.ganesha.abpv.R;
+
 import com.google.android.gms.auth.api.Auth;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.common.ConnectionResult;
@@ -43,21 +43,21 @@ public class DoctorLogin extends AppCompatActivity implements GoogleApiClient.On
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_doctor_login);
+        setContentView(com.example.ganesha.abpv.R.layout.activity_doctor_login);
 
         cd = new ConnectionDetector(getApplicationContext());
-        txtEmailDL=(EditText) findViewById(R.id.editDoctorEmailLogin);
+        txtEmailDL=(EditText) findViewById(com.example.ganesha.abpv.R.id.editDoctorEmailLogin);
         txtEmailDL.requestFocus();
-        txtPasswordDL=(EditText) findViewById(R.id.edit_doctor_password);
-        btnDoctorLoginDL=(Button) findViewById(R.id.btn_doctor_login);
-        btnGoogleLoginDL=(Button) findViewById(R.id.btn_doctor_google_login);
-        btnResetPasswordDL=(Button) findViewById(R.id.btn_doctor_password_reset);
+        txtPasswordDL=(EditText) findViewById(com.example.ganesha.abpv.R.id.edit_doctor_password);
+        btnDoctorLoginDL=(Button) findViewById(com.example.ganesha.abpv.R.id.btn_doctor_login);
+        btnGoogleLoginDL=(Button) findViewById(com.example.ganesha.abpv.R.id.btn_doctor_google_login);
+        btnResetPasswordDL=(Button) findViewById(com.example.ganesha.abpv.R.id.btn_doctor_password_reset);
         mAuth = FirebaseAuth.getInstance();
 
         Log.d(TAG,"InstanceID token: "+ FirebaseInstanceId.getInstance().getToken());
 
         GoogleSignInOptions gso=new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-                .requestIdToken(getString(R.string.default_web_client_id)).requestEmail().build();
+                .requestIdToken(getString(com.example.ganesha.abpv.R.string.default_web_client_id)).requestEmail().build();
 
         mGoogleApiClient = new GoogleApiClient.Builder(this).addApi(Auth.GOOGLE_SIGN_IN_API,gso).build();
 

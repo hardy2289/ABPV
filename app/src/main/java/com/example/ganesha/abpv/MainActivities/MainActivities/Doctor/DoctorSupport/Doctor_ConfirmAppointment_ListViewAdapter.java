@@ -8,8 +8,6 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
-import com.example.ganesha.abpv.R;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -64,16 +62,16 @@ public class Doctor_ConfirmAppointment_ListViewAdapter extends BaseAdapter {
 		final ViewHolder holder;
 		if (view == null) {
 			holder = new ViewHolder();
-			view = inflater.inflate(R.layout.doctor_confirm_appointment_listview, null);
+			view = inflater.inflate(com.example.ganesha.abpv.R.layout.doctor_confirm_appointment_listview, null);
 			// Locate the TextViews in listview_item.xml
-			holder.pateint_id = (TextView) view.findViewById(R.id.Patient_id);
-			holder.patient_name = (TextView) view.findViewById(R.id.Patient_name);
-			holder.Date_of_birth = (TextView) view.findViewById(R.id.patiendob);
-            holder.Appointment_Date = (TextView) view.findViewById(R.id.Appointment);
-            holder.DoctorName = (TextView) view.findViewById(R.id.Doctor_name);
-            holder.pPhone = (TextView)view.findViewById(R.id.patientcontact);
+			holder.pateint_id = (TextView) view.findViewById(com.example.ganesha.abpv.R.id.Patient_id);
+			holder.patient_name = (TextView) view.findViewById(com.example.ganesha.abpv.R.id.Patient_name);
+			holder.Date_of_birth = (TextView) view.findViewById(com.example.ganesha.abpv.R.id.patiendob);
+            holder.Appointment_Date = (TextView) view.findViewById(com.example.ganesha.abpv.R.id.Appointment);
+            holder.DoctorName = (TextView) view.findViewById(com.example.ganesha.abpv.R.id.Doctor_name);
+            holder.pPhone = (TextView)view.findViewById(com.example.ganesha.abpv.R.id.patientcontact);
          //   holder.pemail = (TextView)view.findViewById(R.id.Appointment_no);
-            holder.docorId = (TextView)view.findViewById(R.id.Docotorid);
+            holder.docorId = (TextView)view.findViewById(com.example.ganesha.abpv.R.id.Docotorid);
 			view.setTag(holder);
 
 

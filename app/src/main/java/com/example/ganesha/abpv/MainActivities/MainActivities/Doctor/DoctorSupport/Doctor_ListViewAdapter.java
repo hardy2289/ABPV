@@ -7,8 +7,6 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
-import com.example.ganesha.abpv.R;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -64,17 +62,17 @@ public class Doctor_ListViewAdapter extends BaseAdapter {
 		final ViewHolder holder;
 		if (view == null) {
 			holder = new ViewHolder();
-			view = inflater.inflate(R.layout.doctor_listview, null);
+			view = inflater.inflate(com.example.ganesha.abpv.R.layout.doctor_listview, null);
 			// Locate the TextViews in listview_item.xml
-			holder.pateint_id = (TextView) view.findViewById(R.id.Patient_id);
-			holder.patient_name = (TextView) view.findViewById(R.id.Patient_name);
-			holder.Date_of_birth = (TextView) view.findViewById(R.id.patiendob);
-            holder.Appointment_Date = (TextView) view.findViewById(R.id.Appointment);
-            holder.DoctorName = (TextView) view.findViewById(R.id.Doctor_name);
-            holder.Medication = (TextView)view.findViewById(R.id.patientcontact);
-            holder.MedicineAmount = (TextView)view.findViewById(R.id.emailaddress);
-            holder.MedicineDispence = (TextView)view.findViewById(R.id.Appointment_no);
-            holder.MedicineRefill = (TextView)view.findViewById(R.id.Docotorid);
+			holder.pateint_id = (TextView) view.findViewById(com.example.ganesha.abpv.R.id.Patient_id);
+			holder.patient_name = (TextView) view.findViewById(com.example.ganesha.abpv.R.id.Patient_name);
+			holder.Date_of_birth = (TextView) view.findViewById(com.example.ganesha.abpv.R.id.patiendob);
+            holder.Appointment_Date = (TextView) view.findViewById(com.example.ganesha.abpv.R.id.Appointment);
+            holder.DoctorName = (TextView) view.findViewById(com.example.ganesha.abpv.R.id.Doctor_name);
+            holder.Medication = (TextView)view.findViewById(com.example.ganesha.abpv.R.id.patientcontact);
+            holder.MedicineAmount = (TextView)view.findViewById(com.example.ganesha.abpv.R.id.emailaddress);
+            holder.MedicineDispence = (TextView)view.findViewById(com.example.ganesha.abpv.R.id.Appointment_no);
+            holder.MedicineRefill = (TextView)view.findViewById(com.example.ganesha.abpv.R.id.Docotorid);
 			view.setTag(holder);
 
 

@@ -25,7 +25,7 @@ import android.widget.Toast;
 import com.example.ganesha.abpv.MainActivities.MainActivities.Model.AppointmentHolder;
 import com.example.ganesha.abpv.MainActivities.MainActivities.Model.NewAppointments;
 import com.example.ganesha.abpv.MainActivities.MainActivities.Patient.FragmentSupport;
-import com.example.ganesha.abpv.R;
+
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
@@ -190,11 +190,11 @@ public class BookingAppointmentF extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        final View rootView = inflater.inflate(R.layout.fragment_booking_appointment, container, false);
+        final View rootView = inflater.inflate(com.example.ganesha.abpv.R.layout.fragment_booking_appointment, container, false);
         // [START create_database_reference]
         mDatabase = FirebaseDatabase.getInstance().getReference();
         // [END create_database_reference]
-        mRecycler = (RecyclerView) rootView.findViewById(R.id.points_list);
+        mRecycler = (RecyclerView) rootView.findViewById(com.example.ganesha.abpv.R.id.points_list);
 
 
         mRecycler.setHasFixedSize(true);
@@ -228,7 +228,7 @@ public class BookingAppointmentF extends Fragment {
         Query postsQuery = getQuery(mDatabase);
 
         // Query postsQuery = getQuery(mDatabase).orderByChild("shoppingStatus").equalTo("In Process");
-        mAdapter = new FirebaseRecyclerAdapter<NewAppointments, AppointmentHolder>(NewAppointments.class, R.layout.listview_item_display, AppointmentHolder.class, postsQuery) {
+        mAdapter = new FirebaseRecyclerAdapter<NewAppointments, AppointmentHolder>(NewAppointments.class, com.example.ganesha.abpv.R.layout.listview_item_display, AppointmentHolder.class, postsQuery) {
             @SuppressLint("SetTextI18n")
             @Override
             protected void populateViewHolder(final AppointmentHolder viewHolder, final NewAppointments model, final int position) {
@@ -244,7 +244,7 @@ public class BookingAppointmentF extends Fragment {
 
                         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
                         LayoutInflater inflater = (LayoutInflater)getActivity().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-                        View promptsView = inflater.inflate(R.layout.custom, null);
+                        View promptsView = inflater.inflate(com.example.ganesha.abpv.R.layout.custom, null);
 
 
 
@@ -252,16 +252,16 @@ public class BookingAppointmentF extends Fragment {
 
                         final AlertDialog dialog = builder.create();
 
-                        final TextView aAppointmentDatec=(TextView) promptsView.findViewById(R.id.Appointment_Datec);
+                        final TextView aAppointmentDatec=(TextView) promptsView.findViewById(com.example.ganesha.abpv.R.id.Appointment_Datec);
                         aAppointmentDatec.setText(model.AppointmentDateA);
-                        final TextView aAppointmentTimec = (TextView) promptsView.findViewById(R.id.Appointment_Timec);
+                        final TextView aAppointmentTimec = (TextView) promptsView.findViewById(com.example.ganesha.abpv.R.id.Appointment_Timec);
                         aAppointmentTimec.setText(model.AppointmentTimeA);
-                        final TextView aDoctorIDc = (TextView) promptsView.findViewById(R.id.Doctor_idc);
+                        final TextView aDoctorIDc = (TextView) promptsView.findViewById(com.example.ganesha.abpv.R.id.Doctor_idc);
                         aDoctorIDc.setText(model.DoctorIDA);
-                        final TextView aDoctorNamec = (TextView) promptsView.findViewById(R.id.Doctor_namec);
+                        final TextView aDoctorNamec = (TextView) promptsView.findViewById(com.example.ganesha.abpv.R.id.Doctor_namec);
                         aDoctorNamec.setText(model.DoctorNameA);
 
-                        Button dialogButton = (Button) promptsView.findViewById(R.id.bookappointment);
+                        Button dialogButton = (Button) promptsView.findViewById(com.example.ganesha.abpv.R.id.bookappointment);
                         // if button is clicked, close the custom dialog
                         dialogButton.setOnClickListener(new View.OnClickListener() {
                             @Override
@@ -325,13 +325,13 @@ public class BookingAppointmentF extends Fragment {
 
     public void onPostExecute(Void result) {
         // Locate the listview in activity_booking_appointment.xmlappointment.xml
-        RView=(RecyclerView)view.findViewById(R.id.points_list);
+        RView=(RecyclerView)view.findViewById(com.example.ganesha.abpv.R.id.points_list);
         // Pass the results into Booking_ListViewAdapter.java
 
         // Binds the Adapter to the ListView
         RView.setAdapter(mAdapter);
         // Close the progressdialog
-        SearchAppointment = (EditText) view.findViewById(R.id.ApponintmentSearch);
+        SearchAppointment = (EditText) view.findViewById(com.example.ganesha.abpv.R.id.ApponintmentSearch);
         //  SearchAppointment.setSelected(false);
         // Capture Text in EditText
         SearchAppointment.addTextChangedListener(new TextWatcher() {

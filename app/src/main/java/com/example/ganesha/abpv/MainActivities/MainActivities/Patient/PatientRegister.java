@@ -12,11 +12,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.ganesha.abpv.MainActivities.MainActivities.ConnectionDetector;
-import com.example.ganesha.abpv.MainActivities.MainActivities.Model.Appointments;
-import com.example.ganesha.abpv.MainActivities.MainActivities.Model.Users;
-import com.example.ganesha.abpv.MainActivities.MainActivities.Support;
-import com.example.ganesha.abpv.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -25,6 +20,11 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.iid.FirebaseInstanceId;
+
+import com.example.ganesha.abpv.MainActivities.MainActivities.ConnectionDetector;
+import com.example.ganesha.abpv.MainActivities.MainActivities.Model.Appointments;
+import com.example.ganesha.abpv.MainActivities.MainActivities.Model.Users;
+import com.example.ganesha.abpv.MainActivities.MainActivities.Support;
 
 public class PatientRegister extends AppCompatActivity {
 
@@ -46,15 +46,15 @@ public class PatientRegister extends AppCompatActivity {
     protected void onCreate (Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.patient_register_ep);
+        setContentView(com.example.ganesha.abpv.R.layout.patient_register_ep);
         cd = new ConnectionDetector(getApplicationContext());
 
-        txtEmail = (EditText) findViewById(R.id.edit_txt_email_patient_loginep);
-        txtPassword = (EditText) findViewById(R.id.edit_txt_password_patient_loginep);
-        btnRegister = (Button) findViewById(R.id.btn_register_loginpagep);
-        btnLogin = (Button) findViewById(R.id.btn_patient_loginep);
-        btnGoogleLogin = (Button) findViewById(R.id.btn_google_signinep);
-        btnResetPassword = (Button) findViewById(R.id.btn_password_resetep);
+        txtEmail = (EditText) findViewById(com.example.ganesha.abpv.R.id.edit_txt_email_patient_loginep);
+        txtPassword = (EditText) findViewById(com.example.ganesha.abpv.R.id.edit_txt_password_patient_loginep);
+        btnRegister = (Button) findViewById(com.example.ganesha.abpv.R.id.btn_register_loginpagep);
+        btnLogin = (Button) findViewById(com.example.ganesha.abpv.R.id.btn_patient_loginep);
+        btnGoogleLogin = (Button) findViewById(com.example.ganesha.abpv.R.id.btn_google_signinep);
+        btnResetPassword = (Button) findViewById(com.example.ganesha.abpv.R.id.btn_password_resetep);
         mDatabase = FirebaseDatabase.getInstance().getReference();
         mAuth = FirebaseAuth.getInstance();
 

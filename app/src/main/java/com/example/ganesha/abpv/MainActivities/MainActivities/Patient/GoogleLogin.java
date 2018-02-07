@@ -202,7 +202,7 @@ public class GoogleLogin extends BaseActivity implements GoogleApiClient.OnConne
                     writeNewUser(FirebaseInstanceId.getInstance().getToken(), userDateofBirth, user.getEmail(),  userFirstname,  userGender, userLastname,
                             userPhoneno, uid,  username, user.getUid());
 
-                   // Toast.makeText(GoogleLogin.this, "Welcome to the Appointments Booking and Prescription Viewer", Toast.LENGTH_LONG).show();
+                    Toast.makeText(GoogleLogin.this, "Welcome to the Appointments Booking and Prescription Viewer", Toast.LENGTH_LONG).show();
                     Intent takeUserHome = new Intent(GoogleLogin.this, Navigation.class);
                     startActivity(takeUserHome);
                     finish();

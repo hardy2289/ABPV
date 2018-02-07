@@ -22,7 +22,7 @@ import android.widget.Toast;
 import com.example.ganesha.abpv.MainActivities.MainActivities.Model.DoctorAppConfirmListHolder;
 import com.example.ganesha.abpv.MainActivities.MainActivities.Model.DoctorDetails;
 import com.example.ganesha.abpv.MainActivities.MainActivities.Patient.FragmentSupport;
-import com.example.ganesha.abpv.R;
+
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
@@ -178,12 +178,12 @@ public class AppointmentConfirmation extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View rootView = inflater.inflate(R.layout.fragment_appointment_confirmation, container, false);
+        View rootView = inflater.inflate(com.example.ganesha.abpv.R.layout.fragment_appointment_confirmation, container, false);
         // [START create_database_reference]
         mDatabase = FirebaseDatabase.getInstance().getReference();
         // [END create_database_reference]
 
-        mRecycler = (RecyclerView) rootView.findViewById(R.id.doctor_list);
+        mRecycler = (RecyclerView) rootView.findViewById(com.example.ganesha.abpv.R.id.doctor_list);
         mRecycler.setHasFixedSize(true);
 
 // Set up Layout Manager, reverse layout
@@ -225,7 +225,7 @@ public class AppointmentConfirmation extends Fragment {
             }, 1000);
 
 
-            mAdapter = new FirebaseRecyclerAdapter<DoctorDetails, DoctorAppConfirmListHolder>(DoctorDetails.class, R.layout.listview_item_display_doctor, DoctorAppConfirmListHolder.class, postsQuery) {
+            mAdapter = new FirebaseRecyclerAdapter<DoctorDetails, DoctorAppConfirmListHolder>(DoctorDetails.class, com.example.ganesha.abpv.R.layout.listview_item_display_doctor, DoctorAppConfirmListHolder.class, postsQuery) {
             @SuppressLint("SetTextI18n")
             @Override
             protected void populateViewHolder(DoctorAppConfirmListHolder viewHolder, final DoctorDetails model, final int position) {
@@ -241,7 +241,7 @@ public class AppointmentConfirmation extends Fragment {
 
                         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
                         LayoutInflater inflater = (LayoutInflater)getActivity().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-                        View promptsView = inflater.inflate(R.layout.custom_doctor_confirming, null);
+                        View promptsView = inflater.inflate(com.example.ganesha.abpv.R.layout.custom_doctor_confirming, null);
 
 
 
@@ -249,18 +249,18 @@ public class AppointmentConfirmation extends Fragment {
 
                         final AlertDialog dialog = builder.create();
 
-                        final TextView aAppID = (TextView) promptsView.findViewById(R.id.AppId);
+                        final TextView aAppID = (TextView) promptsView.findViewById(com.example.ganesha.abpv.R.id.AppId);
                         aAppID.setText(model.AppointmentIDD);
-                        final TextView aAppointmentDatec=(TextView) promptsView.findViewById(R.id.AppDate);
+                        final TextView aAppointmentDatec=(TextView) promptsView.findViewById(com.example.ganesha.abpv.R.id.AppDate);
                         aAppointmentDatec.setText(model.AppointmentDateD);
-                        final TextView aAppointmentTimec = (TextView) promptsView.findViewById(R.id.AppTime);
+                        final TextView aAppointmentTimec = (TextView) promptsView.findViewById(com.example.ganesha.abpv.R.id.AppTime);
                         aAppointmentTimec.setText(model.AppointmentTimeD);
-                        final TextView aLName = (TextView) promptsView.findViewById(R.id.LNAME);
+                        final TextView aLName = (TextView) promptsView.findViewById(com.example.ganesha.abpv.R.id.LNAME);
                         aLName.setText(model.LastNameD);
-                        final TextView aPID = (TextView) promptsView.findViewById(R.id.PID);
+                        final TextView aPID = (TextView) promptsView.findViewById(com.example.ganesha.abpv.R.id.PID);
                         aPID.setText(model.PatientIDD);
 
-                        Button dialogButton = (Button) promptsView.findViewById(R.id.confirmappointment);
+                        Button dialogButton = (Button) promptsView.findViewById(com.example.ganesha.abpv.R.id.confirmappointment);
                         // if button is clicked, close the custom dialog
                         dialogButton.setOnClickListener(new View.OnClickListener() {
                             @Override

@@ -11,7 +11,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.ganesha.abpv.MainActivities.MainActivities.ConnectionDetector;
-import com.example.ganesha.abpv.R;
+
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
@@ -32,11 +32,11 @@ public class ResetPassword extends PatientLogin {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_reset_password);
+        setContentView(com.example.ganesha.abpv.R.layout.activity_reset_password);
         cd = new ConnectionDetector(getApplicationContext());
-        btnRestPasswordRP=(Button) findViewById(R.id.btn_patient_password_reset_FP);
-        btnLoginRP=(Button) findViewById(R.id.btn_patient_login_FP);
-        txtEmailRP=(EditText) findViewById(R.id.edit_txt_email_FP);
+        btnRestPasswordRP=(Button) findViewById(com.example.ganesha.abpv.R.id.btn_patient_password_reset_FP);
+        btnLoginRP=(Button) findViewById(com.example.ganesha.abpv.R.id.btn_patient_login_FP);
+        txtEmailRP=(EditText) findViewById(com.example.ganesha.abpv.R.id.edit_txt_email_FP);
         btnRestPasswordRP.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
 
