@@ -5,7 +5,7 @@
     android:orientation="vertical"
     android:layout_height="match_parent"
     android:layout_width="match_parent"
-    tools:context="com.example.ganesha.abpv.hardy.example.ganesha.abpv.MainActivities.MainActivities.Patient.PatientRegister">
+    tools:context="com.myapp.ganesha.abpv.hardy.example.ganesha.abpv.MainActivities.MainActivities.Patient.PatientRegister">
 
 
 

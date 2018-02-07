@@ -10,7 +10,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:338029480427:android:d8ef539efc7989e3",
         "android_client_info": {
-          "package_name": "com.example.ganesha.abpv"
+          "package_name": "com.myapp.ganesha.abpv"
         }
       },
       "oauth_client": [
@@ -18,8 +18,96 @@
           "client_id": "338029480427-p4en8v8ed7ek1vhkti8jgkol8ppqsdrh.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.example.ganesha.abpv",
+            "package_name": "com.myapp.ganesha.abpv",
             "certificate_hash": "de9ec9269c840da2f255c187558a030945d17c59"
+          }
+        },
+        {
+          "client_id": "338029480427-rvcl3rouqulpiacqd5lvc8eugt0jti3l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAwBwgYEqYxcYS1H-AB0AKRQgGcZqqctLM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "338029480427-rvcl3rouqulpiacqd5lvc8eugt0jti3l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:338029480427:android:2961ebb05de0c230",
+        "android_client_info": {
+          "package_name": "com.myapp.ganesha.newtrial"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "338029480427-9bfva003vjfhkm3iplokcil5eau9kmpq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.myapp.ganesha.newtrial",
+            "certificate_hash": "de9ec9269c840da2f255c187558a030945d17c59"
+          }
+        },
+        {
+          "client_id": "338029480427-rvcl3rouqulpiacqd5lvc8eugt0jti3l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAwBwgYEqYxcYS1H-AB0AKRQgGcZqqctLM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "338029480427-rvcl3rouqulpiacqd5lvc8eugt0jti3l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:338029480427:android:f878fc51f044361b",
+        "android_client_info": {
+          "package_name": "com.myapp.ganesha.abpv"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "338029480427-7oj30j56lstepmcintlu08rn1fcikvcf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.myapp.ganesha.abpv",
+            "certificate_hash": "249f9237f1014a3f260906fca61e9711d35f4b21"
           }
         },
         {

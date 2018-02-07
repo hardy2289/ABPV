@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:paddingBottom="16dp"
     android:paddingTop="16dp"
-    tools:context="com.example.ganesha.abpv.hardy.example.ganesha.abpv.MainActivities.MainActivities.Doctor.PrescriptionConfirmation">
+    tools:context="com.myapp.ganesha.abpv.hardy.example.ganesha.abpv.MainActivities.MainActivities.Doctor.PrescriptionConfirmation">
 
     <ListView
         android:id="@+id/ConfirmPrescriptionListView"

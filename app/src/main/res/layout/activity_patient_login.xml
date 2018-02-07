@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="match_parent"
-    tools:context="com.example.ganesha.abpv.hardy.example.ganesha.abpv.MainActivities.MainActivities.Patient.PatientLogin">
+    tools:context="com.myapp.ganesha.abpv.hardy.example.ganesha.abpv.MainActivities.MainActivities.Patient.PatientLogin">
 
 
 

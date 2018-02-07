@@ -1,10 +1,18 @@
 apply plugin: 'com.android.application'
 
 android {
+    signingConfigs {
+        config {
+            keyAlias 'ABPVKey'
+            keyPassword 'Hunny22189'
+            storeFile file('C:/Users/Ganesha/Desktop/android.jks')
+            storePassword 'Hunny22189'
+        }
+    }
     compileSdkVersion 24
     buildToolsVersion "26.0.0"
     defaultConfig {
-        applicationId "com.example.ganesha.abpv"
+        applicationId "com.myapp.ganesha.abpv"
         minSdkVersion 16
         targetSdkVersion 24
         versionCode 1
@@ -15,6 +23,7 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
         }
     }
     packagingOptions {
@@ -32,11 +41,10 @@ android {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile fileTree(include: ['*.jar'], dir: 'libs')
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-
     compile 'com.google.firebase:firebase-database:9.0.2'
     compile 'com.android.support:design:24.2.1'
     compile 'com.android.support:recyclerview-v7:24.2.1'
@@ -63,8 +71,6 @@ dependencies {
     compile 'com.github.bumptech.glide:glide:3.6.1'
     compile 'com.google.android.gms:play-services-appinvite:9.0.2'
     compile 'com.github.igortrncic.dotted-progress-bar:library:1.0.0'
-
-
     testCompile 'junit:junit:4.12'
 }
 apply plugin: 'com.google.gms.google-services'
