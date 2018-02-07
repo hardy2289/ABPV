@@ -6,7 +6,7 @@
     android:background="@android:color/holo_blue_light"
     android:paddingBottom="16dp"
     android:paddingTop="16dp"
-    tools:context="com.example.ganesha.abpv.MainActivities.MainActivities.Doctor.DoctorHome">
+    tools:context="com.example.ganesha.abpv.hardy.example.ganesha.abpv.MainActivities.MainActivities.Doctor.DoctorHome">
 
 
     <ListView

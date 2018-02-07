@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#99257bd7"
-    tools:context="com.example.ganesha.abpv.MainActivities.MainActivities.MainActivity">
+    tools:context="com.example.ganesha.abpv.hardy.example.ganesha.abpv.MainActivities.MainActivities.MainActivity">
 
     <Button
         android:id="@+id/btnDoctorPage"

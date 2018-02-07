@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.ganesha.abpv.MainActivities.MainActivities.PatientFragment.CancellingAppointmentF">
+    tools:context="com.example.ganesha.abpv.hardy.example.ganesha.abpv.MainActivities.MainActivities.PatientFragment.CancellingAppointmentF">
 
 
     <RelativeLayout
@@ -15,22 +15,22 @@
             android:id="@+id/relativeLayout1"
             android:layout_width="match_parent"
             android:layout_height="25dp"
-            android:layout_marginTop="10dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:layout_marginBottom="15dp"
+            android:layout_marginTop="10dp"
             android:background="@android:color/holo_green_light">
 
             <LinearLayout
                 android:id="@+id/linearLayout2"
                 android:layout_width="match_parent"
                 android:layout_height="2dp"
-                android:background="@android:color/background_dark"
-                android:orientation="horizontal"
                 android:layout_above="@+id/textView"
                 android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true" />
+                android:layout_alignParentStart="true"
+                android:background="@android:color/background_dark"
+                android:orientation="horizontal" />
 
             <TextView
                 android:id="@+id/textView"
@@ -42,27 +42,27 @@
                 android:textColor="@android:color/background_dark"
                 android:textSize="18dp"
                 android:textStyle="bold|italic" />
-            <LinearLayout
-                android:id="@+id/linearLayout1"
-                android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:layout_below="@+id/textView"
-                android:background="@android:color/background_dark"
-                android:orientation="horizontal"
-                android:layout_above="@+id/BookingHistory"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true" />
+
         </RelativeLayout>
 
+        <LinearLayout
+            android:id="@+id/linearLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@android:color/background_dark"
+            android:orientation="horizontal"
+            android:layout_alignBottom="@+id/relativeLayout1"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
 
         <Button
             android:id="@+id/CancelHistory"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="App Cancel History"
-            android:layout_below="@+id/relativeLayout1"
             android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/relativeLayout1"
+            android:text="App Cancel History" />
 
         <Button
             android:id="@+id/BookingHistory"

@@ -11,8 +11,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.ganesha.abpv.MainActivities.MainActivities.ConnectionDetector;
-import com.example.ganesha.abpv.R;
 import com.google.android.gms.auth.api.Auth;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.common.ConnectionResult;
@@ -23,6 +21,8 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.iid.FirebaseInstanceId;
+import com.example.ganesha.abpv.MainActivities.MainActivities.ConnectionDetector;
+import com.example.ganesha.abpv.R;
 
 /**
  * Created by Ganesha on 11/08/2017.

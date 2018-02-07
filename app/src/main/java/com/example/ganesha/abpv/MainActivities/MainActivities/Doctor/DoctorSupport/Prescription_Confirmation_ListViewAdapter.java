@@ -13,8 +13,6 @@ import java.util.ArrayList;
 import java.util.List;
 import com.example.ganesha.abpv.R;
 
-import static com.example.ganesha.abpv.R.id.appointment;
-
 public class Prescription_Confirmation_ListViewAdapter extends BaseAdapter {
 
 

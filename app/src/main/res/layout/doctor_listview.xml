@@ -49,7 +49,7 @@
         android:layout_alignLeft="@+id/Patient_id"
         android:layout_alignStart="@+id/Patient_id"
         android:layout_alignTop="@+id/countrylabel"
-        android:text="Hardy"
+        android:text="example"
         android:textColor="@android:color/background_dark" />
 
     <TextView
@@ -139,7 +139,7 @@
 
         android:layout_alignStart="@+id/patientcontact"
         android:layout_alignTop="@+id/email"
-        android:text="hardy@yahoo.com"
+        android:text="example@yahoo.com"
         android:textColor="@android:color/background_dark" />
 
     <TextView

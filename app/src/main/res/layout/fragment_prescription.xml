@@ -74,7 +74,6 @@
         android:layout_height="wrap_content"
         android:layout_alignEnd="@+id/countrylabel"
         android:layout_alignRight="@+id/countrylabel"
-        android:layout_below="@+id/textView"
         android:layout_marginTop="25dp"
         android:text="Patient ID                     :"
         android:textColor="@android:color/background_dark" />
@@ -86,7 +85,6 @@
         android:layout_alignLeft="@+id/patientNamePP"
         android:layout_alignStart="@+id/patientNamePP"
         android:layout_alignTop="@+id/ranklabel"
-        android:layout_below="@+id/textView"
         android:text="41"
         android:textColor="@android:color/background_dark" />
 
